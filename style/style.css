@@ -38,4 +38,6 @@ main{
     background-color: var(--background2);
     border-radius: 8px;
 }
-
+.container{
+    position: relative;
+}
