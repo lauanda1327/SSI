@@ -1,0 +1,41 @@
+/* reset */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{/*variaveis*/
+    --text: #0a0623;
+    --background: #DFEBFF;
+    --background2: #c9ddfd;
+    --primary: #1a6da8;
+    --secondary: #a394fa;
+    --accent: #57b41d;
+    --textdarktheme: #e0dcf9;
+    --backgrounddarktheme: #021636;
+    --backgrounddarktheme2: #021636;
+    --primarydarktheme: #57aae5;
+    --secondarydarktheme: #14056b;
+    --accentdarktheme: #85e24b;
+}
+body{
+    background-color: var(--background);
+    padding: 10px;
+    display: flex;
+}
+header{
+    min-width: 55px;
+    width: 6vw;
+    height: calc(100vh - 20px);
+    background-color: var(--background2);
+    border-radius: 8px;
+}
+main{
+    margin-left: 1vw;
+    width: 100vw;
+    height: calc(100vh - 20px);
+    background-color: var(--background2);
+    border-radius: 8px;
+}
+
