@@ -73,7 +73,7 @@ canvas{
     position: relative;
     width: 80%;
     height:100%;
-    background-color: #1a6da859;/*transparent*/
+    background-color: #8cb6e0;
     border-radius:0.5vw;
     display: flex;
     align-items: flex-start;
@@ -89,10 +89,7 @@ canvas{
     background-color: #1a6da859;/*transparent*/
     border-radius:0.5vw;
 }
-.caixa p{
-    display: inline-block;
-    font-size: 0.7rem;
-}
+
 span{
     font-size:0.8rem;   
 }
