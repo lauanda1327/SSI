@@ -184,7 +184,7 @@ input[type=range]::-webkit-slider-runnable-track {
     cursor: pointer;
     animation: 0.2s;
     box-shadow: 0px 0px 0px #000000;
-    background: #d9d8d8;
+    background: #719bde;
     border-radius: 1px;
     border: 0px solid #000000;
 }
@@ -201,5 +201,5 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-    background: var(--secondary);
+    background: #719bde;
 }
