@@ -27,6 +27,7 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
 body{
     background-color: var(--background);
     padding: 10px;
@@ -165,4 +166,40 @@ header a:hover{
 }
 .s3{
     background:var(--primary);
+}
+input[type=range] {
+    height: 25px;
+    -webkit-appearance: none;
+    background: #8cb6e0;
+    /*width: 70vw;*/
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animation: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #d9d8d8;
+    border-radius: 1px;
+    border: 0px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #fff;/*circulo*/
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: var(--secondary);
 }
