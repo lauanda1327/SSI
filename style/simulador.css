@@ -19,6 +19,14 @@
     --secondarydarktheme: #14056b;
     --accentdarktheme: #85e24b;
 }
+.caixa{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height:35vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
 body{
     background-color: var(--background);
     padding: 10px;
@@ -116,13 +124,7 @@ header a{
 header a:hover{
     background: var(--primary);
 }
-.caixa{
-    display:flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-}
+
 .a,.b,.c,.d{
     width:1.2vw;
     height:1.2vw;
