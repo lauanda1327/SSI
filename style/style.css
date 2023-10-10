@@ -46,6 +46,7 @@ main{
     padding:6px 1.6vw;
 }
 .container{
+    position: relative;
     width: 60%;
 }
 /*header*/

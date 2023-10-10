@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../style/simulador.css">
-        <title>SSI</title>
-    </head>
-    <body>
-        <header>
-            <!-- Todo o código do header/nav aqui...por favor -->
-            <img src="../model/icons/logo.png" alt="logo do site" class="logo">
-            <div class="caixa">
-                <a href="../index.html"><img src="../model/icons/a.png" alt="link 1" class="a"></a>
-                <a href=""><img src="../model/icons/b.png" alt="link 2" class="b"></a>
-                <a href=""><img src="../model/icons/c.png" alt="link 3" class="c"></a>
-            </div>
-            <div class="adicional">
-                <a href="#" class="info"><img src="../model/icons/d.png" alt="link 4" class="d"></a>
-            </div>
-        </header>
-        <main>
-            <div class="linha1"></div>
-            <div class="linha2"></div>
-            <div class="container">
-                <!-- Todo o código do main aqui...por favor -->
-            </div>
-            <div class="configuracao">
-                <!-- Todo o código do main aqui...por favor -->
-            </div>
 
-        </main>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/simulador.css">
+    <title>SSI - Pêndulo</title>
+</head>
+<body onload="init()">
+    <header>
+        <!-- Todo o código do header/nav aqui...por favor -->
+        <img src="../model/icons/logo.png" alt="logo do site" class="logo">
+        <div class="caixa">
+            <a href="../index.html"><img src="../model/icons/a.png" alt="link 1" class="a"></a>
+            <a href=""><img src="../model/icons/b.png" alt="link 2" class="b"></a>
+            <a href=""><img src="../model/icons/c.png" alt="link 3" class="c"></a>
+        </div>
+        <div class="adicional">
+            <a href="#" class="info"><img src="../model/icons/d.png" alt="link 4" class="d"></a>
+        </div>
+    </header>
+    <main>
+        <div class="linha1"></div>
+        <div class="linha2"></div>
+        <div class="container">
+            <!-- Todo o código do main aqui...por favor -->
+            <canvas width="800" height="500" id="canvas"></canvas>
+        </div>
+        <div class="configuracao">
+            <!-- Todo o código do main aqui...por favor -->
+            <div id="controle">
+                <div class="caixa">
+                    <span>Tamanho Da Corda: 300
+                    </span>
+                    
+                    <input type="range" id="tamCorda" value="300" min="1" max="900">
+                </div>
+                <div class="caixa">
+                    <span>Ângulo Inicial: 20
+                    </span>
+                    <input type="range" id="angInicial" value="20" min="1" max="89">
+                </div>
+                <div class="caixa">
+                    <label for="corfixo">Color:</label>
+                    <input type="color" id="corfixo" value="#efefef"/>
+                </div>
+
+                <button class="btn" onclick="desenharTela()">Desenhar</button>
+                <button class="btn" onclick="resetar()">Resetar</button>
+            </div>
+            <div class="controle2">
+                <span>Velocidade:</span><br />
+                <input type="radio" id="velocidade" name="velocidade" value="normal" />
+                <label for="normal">Normal</label><br />
+                <input type="radio" id="velocidade" name="velocidade" value="devagar" />
+                <label for="devagar">Devagar</label><br />
+            </div>
+        </div>
+    </main>
+    <script src="../model/javascript/script.js"></script>
+</body>
 </html>
