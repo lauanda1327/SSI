@@ -61,19 +61,40 @@ main{
     position:absolute;
     left:50%;
 }
+canvas{
+    width: 800px;
+    height: 500px;
+}
+.controle{
+    height:100%;
+}
 .container{
+    padding:30px 5px; 
     position: relative;
     width: 80%;
     height:100%;
     background-color: #1a6da859;/*transparent*/
     border-radius:0.5vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 .configuracao{
+    padding: 4px;
+    overflow-y: auto;
+    cursor: default;
     position: relative;
     width: 18%;
     height:100%;
     background-color: #1a6da859;/*transparent*/
     border-radius:0.5vw;
+}
+.caixa p{
+    display: inline-block;
+    font-size: 0.7rem;
+}
+span{
+    font-size:0.8rem;   
 }
 /*header*/
 .logo{
@@ -101,7 +122,6 @@ header a:hover{
 .caixa{
     display:flex;
     flex-direction: column;
-    height: 35vh;
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
