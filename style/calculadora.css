@@ -1,5 +1,5 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Diplomata+SC&family=K2D:wght@100;200;300&family=Open+Sans:wght@600&family=Poppins&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Diplomata+SC&family=K2D:wght@100;200;300&family=Open+Sans:wght@600&family=Poppins&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300&display=swap');
 /* reset */
 *{
     margin:0;
@@ -120,18 +120,17 @@ header a:hover{
     cursor: pointer;
     display: flex;
     justify-content:center;
-    align-items: center;
+    align-items: start;
+    padding: 2rem 0.6rem;
     font-family: "Poppins",sans-serif;
     object-fit: cover;
-    padding: 0.2rem;
-    padding-left: 1rem;
 }
 .image{
-    width: 43%;
+    width: 40%;
     height: 80%;
-    align-items: center;
+
 }
-.image img{
+#s123 img{
     max-width: 100%;
     max-height:100%;
 }
@@ -150,7 +149,7 @@ header a:hover{
 .text{
     text-align: start;
     padding-left: 0.7rem;
-    width: 57%;
+    width: 60%;
 }
 .text :hover{
     opacity: 0.8;
