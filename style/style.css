@@ -127,8 +127,8 @@ header a:hover{
     padding-left: 1rem;
 }
 .image{
-    width: 43%;
-    height: 80%;
+    width: 40%;
+    height: 70%;
     align-items: center;
 }
 .image img{
@@ -146,6 +146,10 @@ header a:hover{
 .s3{
     background:var(--primary);
     color: var(--background);
+}
+#s123:hover .image img{
+    transition: .3s;
+    transform: rotate(10deg);
 }
 .text{
     text-align: start;

@@ -27,6 +27,14 @@
     align-items: center;
     justify-content: space-evenly;
 }
+.caixa2{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 body{
     background-color: var(--background);
@@ -70,9 +78,17 @@ main{
     position:absolute;
     left:50%;
 }
-canvas{
+#canvas{
     width: 800px;
     height: 500px;
+}
+#canvas2{
+   
+    transform: rotate(-90deg);
+    width: 500px;
+    position:absolute;
+    top: -100px;
+    height: 800px;
 }
 .controle{
     height:100%;
