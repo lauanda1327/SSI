@@ -166,3 +166,22 @@ header a:hover{
 .text p{
     font-size: 0.8rem;
 }
+.caixa img{
+    animation: animacao 6s infinite;
+}
+@keyframes animacao{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.pi{
+    width: 64%;
+    margin-top:2vw;
+    margin-left: 2vw;
+}
