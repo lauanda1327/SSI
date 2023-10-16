@@ -32,15 +32,15 @@
             <!-- Todo o código do main aqui...por favor -->
             <div id="controle">
                 <div class="caixatrue">
-                    <span>Tamanho Da Corda: 300
+                    <span class="sp">Tamanho Da Corda: 300
                     </span>
                     
-                    <input type="range" id="tamCorda" value="300" min="1" max="900">
+                    <input type="range" id="tamCorda" value="300" min="1" max="900" onchange="showVal2(this.value)">
                 </div>
                 <div class="caixatrue">
-                    <span>Ângulo Inicial: 20
+                    <span class="ap">Ângulo Inicial: 20
                     </span>
-                    <input type="range" id="angInicial" value="20" min="1" max="89">
+                    <input type="range" id="angInicial" value="20" min="1" max="89" onchange="showVal(this.value)">
                 </div>
                 <div class="caixatrue">
                     <label for="corfixo">Color:</label>
