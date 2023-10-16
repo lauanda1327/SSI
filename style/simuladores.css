@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Diplomata+SC&family=K2D:wght@100;200;300&family=Open+Sans:wght@600&family=Poppins&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300&display=swap');
 /* reset */
 *{
     margin:0;
@@ -93,6 +94,20 @@ main{
 .controle{
     height:100%;
 }
+.controle2{
+    font-family:'Poppins', Courier, monospace;
+    margin:2rem 0;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+label{
+    display: inline-block;
+}
+.caixatrue{
+    margin:1rem auto;
+}
 .container{
     padding:30px 5px; 
     position: relative;
@@ -105,6 +120,10 @@ main{
     justify-content: center;
 }
 .configuracao{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
     padding: 4px;
     overflow-y: auto;
     cursor: default;
@@ -116,6 +135,8 @@ main{
 }
 
 span{
+    margin: 1.1rem 0;
+    font-family: "Poppins",sans-serif;
     font-size:0.8rem;   
 }
 /*header*/
@@ -125,6 +146,25 @@ span{
     border-radius:50%;
     margin-top: 1.3vw;
     cursor: pointer;
+}
+.btn{
+    font-family: "Poppins",sans-serif;
+    padding:.3rem .5rem;
+    border-radius: 16px;
+    border:inherit;
+    width: 48%;
+    background: whitesmoke;
+    color:var(--primary);
+    cursor: pointer;
+    margin:1.5vw 1s5px;
+}
+.btn:hover{
+    transition: 0.2s;
+    background-color: #c9ddfd;
+    color:black;
+}
+.btn:active{
+    transform: scale(0.90);
 }
 .logo:hover{
     transition: 0.3s;

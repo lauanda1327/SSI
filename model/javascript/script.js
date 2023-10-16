@@ -144,3 +144,9 @@ function showSelected(e) {
         }
     }
 }
+function showVal(newVal){
+    document.querySelector(".ap").innerHTML="Ângulo Inicial: " + newVal;
+}
+function showVal2(newVal){
+    document.querySelector(".sp").innerHTML="Tamanho da corda: " + newVal;
+}
