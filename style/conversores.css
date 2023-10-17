@@ -194,11 +194,12 @@
   }
   .resposta{
       position: absolute;
+      background: rgba(255, 255, 255, 0.50);
       top: 30vh;
       right:5vw;
       width:25vw;
       height: 15vw;
-      border:2px solid black;
+      border:2px solid rgb(144, 143, 143);
   }
   label{
       font-family: "Poppins";
