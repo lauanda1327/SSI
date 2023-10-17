@@ -46,16 +46,21 @@
                     <label for="corfixo">Color:</label>
                     <input type="color" id="corfixo" value="#efefef"/>
                 </div>
-
-                <button class="btn" onclick="desenharTela()">Desenhar</button>
-                <button class="btn" onclick="resetar()">Resetar</button>
+                <div class="dad">
+                    <button class="btn" onclick="desenharTela()">Desenhar</button>
+                    <button class="btn" onclick="resetar()">Resetar</button>
+                </div>
             </div>
             <div class="controle2">
                 <span>Velocidade:</span><br />
-                <input type="radio" id="velocidade" name="velocidade" value="normal" />
-                <label for="normal">Normal</label><br />
-                <input type="radio" id="velocidade" name="velocidade" value="devagar" />
-                <label for="devagar">Devagar</label><br />
+                <div class="oi">
+                    <input type="radio" id="velocidade" name="velocidade" value="normal" />
+                    <label for="normal">Normal </label><br />
+                </div>
+                <div>
+                    <input type="radio" id="velocidade" name="velocidade" value="devagar" />
+                    <label for="devagar">Devagar</label><br />
+                </div>
             </div>
         </div>
     </main>
