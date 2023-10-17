@@ -26,9 +26,9 @@
             <h1>Converta de Graus para Radiano</h1>
             <div>
                 <label>Graus:</label>
-                <input type="number" placeholder="60°" name="graus" id="inputGraus">
+                <input type="number" placeholder="60°" name="graus" id="inputGraus" value="">
                 <div>
-                    <button>Converter</button> 
+                    <button onclick="converta()">Converter</button> 
                 </div>
             </div>
             <div class="resposta">
@@ -37,6 +37,12 @@
         </main>
     </body>
     <script>
-       
+       function converta(){
+        let graus = document.getElementById("inputGraus")
+        let resposta = document.getElementsByClassName("resposta")
+
+        let valor = graus.value * (Math.PI/180)
+        resposta.innerHTML = valor
+       }
     </script>
 </html>
