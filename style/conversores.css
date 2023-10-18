@@ -209,7 +209,7 @@
       font-family: "Poppins";
       position:absolute;
       top: 40vh;
-      left:22vw;
+      left:30vw;
   }
   .container4 button{
       font-family: "Poppins";
@@ -224,13 +224,14 @@
       top: 55vh;
       left:28vw;
   }
-  .container4 input{
-      width:18vw;
+  .container4 #inputpi{
+      width:10vw;
       padding:0.3rem 0;
       outline: none;
       position:absolute;
       top: 40vh;
-      left:28vw;
+      left:36vw;
+      text-align:center;
   }
   .container4 button:active{
       transform: scale(0.90);
@@ -239,4 +240,15 @@
     position:absolute;
     top:40vh;
     font-size:1.5rem;
+    color:black;
+    left:49vw;
+  }
+  #inputpi2{
+    width:10vw;
+    padding:0.3rem 0;
+    outline: none;
+    position:absolute;
+    top: 40vh;
+    left:53vw;
+   text-align:center;
   }

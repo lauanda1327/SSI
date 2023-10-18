@@ -26,9 +26,9 @@
             <h1>Converta de Radiano para Graus</h1>
             <div>
                 <label>Radiano:</label>
-                <input type="number" placeholder="1/2" name="radiano" id="inputpi" value="">
+                <input type="number" placeholder="1" name="radiano" id="inputpi" value="">
                 <div class="divisao">/</div>
-                <input type="number" placeholder="1/2" name="radiano" id="inputpi" value="">
+                <input type="number" placeholder="2" name="radiano" id="inputpi2" value="">
                 <div>
                     <button onclick="converta()">Converter</button> 
                 </div>
@@ -41,9 +41,17 @@
     <script>
        function converta(){
         let radiano = document.getElementById("inputpi")
+        let radiano2 = document.getElementById("inputpi2")
         radiano = radiano.value
-        let graus = radiano*180
-        document.querySelector(".resposta").innerHTML = graus
+        radiano2 = radiano2.value
+        if(radiano2 != 0){
+            let graus = radiano/radiano2*180
+            document.querySelector(".resposta").innerHTML = graus
+        }else{
+            let graus = radiano*180
+            document.querySelector(".resposta").innerHTML = graus
+        }
+        
        }
     </script>
 </html>

@@ -39,10 +39,11 @@
     <script>
        function converta(){
         let graus = document.getElementById("inputGraus")
-        let resposta = document.getElementsByClassName("resposta")
 
-        let valor = graus.value * (Math.PI/180)
-        resposta.innerHTML = valor
-       }
+        radiano = graus.value * Math.PI/180
+        radiano = radiano.toFixed(4)
+        document.querySelector(".resposta").innerHTML = radiano
+
+        }
     </script>
 </html>
