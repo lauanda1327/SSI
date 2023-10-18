@@ -27,6 +27,8 @@
             <div>
                 <label>Radiano:</label>
                 <input type="number" placeholder="1/2" name="radiano" id="inputpi" value="">
+                <div class="divisao">/</div>
+                <input type="number" placeholder="1/2" name="radiano" id="inputpi" value="">
                 <div>
                     <button onclick="converta()">Converter</button> 
                 </div>
@@ -39,10 +41,9 @@
     <script>
        function converta(){
         let radiano = document.getElementById("inputpi")
-        let resposta = document.getElementsByClassName("resposta")
-
-
-
+        radiano = radiano.value
+        let graus = radiano*180
+        document.querySelector(".resposta").innerHTML = graus
        }
     </script>
 </html>
