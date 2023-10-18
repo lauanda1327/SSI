@@ -197,12 +197,12 @@
       font-size:1.4rem;
       position: absolute;
       background: rgba(255, 255, 255, 0.50);
-      top: 40vh;
-      left: 57vw;
-      width:8vw;
+      top: 60vh;
+      left: 72vw;
+      width:25vw;
       display:grid;
       place-items: center;
-      height: 5vw;
+      height: 7vw;
       border:2px solid rgb(144, 143, 143);
   }
   label{
@@ -251,4 +251,13 @@
     top: 40vh;
     left:53vw;
    text-align:center;
+  }
+  #inputGraus{
+    width:10vw;
+      padding:0.3rem 0;
+      outline: none;
+      position:absolute;
+      top: 40vh;
+      left:36vw;
+      text-align:center;
   }

@@ -26,9 +26,9 @@
             <h1>Converta de Radiano para Graus</h1>
             <div>
                 <label>Radiano:</label>
-                <input type="number" placeholder="1" name="radiano" id="inputpi" value="">
+                <input type="number" value="1" name="radiano" id="inputpi" min="0">
                 <div class="divisao">/</div>
-                <input type="number" placeholder="2" name="radiano" id="inputpi2" value="">
+                <input type="number" value="2" name="radiano" id="inputpi2" min="1">
                 <div>
                     <button onclick="converta()">Converter</button> 
                 </div>
@@ -42,16 +42,23 @@
        function converta(){
         let radiano = document.getElementById("inputpi")
         let radiano2 = document.getElementById("inputpi2")
-        radiano = radiano.value
-        radiano2 = radiano2.value
-        if(radiano2 != 0){
-            let graus = radiano/radiano2*180
-            document.querySelector(".resposta").innerHTML = graus
-        }else{
-            let graus = radiano*180
-            document.querySelector(".resposta").innerHTML = graus
-        }
         
+        if(radiano2.value != 0){
+            let graus = radiano.value/radiano2.value*(180/Math.PI)
+            graus = graus.toFixed(2)
+            document.querySelector(".resposta").innerHTML = graus + "°"
+            radiano.value = "0"
+            radiano2.value = "1"
+        }
+        else{
+            alert("Divisão por zero é impossivel!! O Software irá considerar apenas o primeiro campo de valor!!")
+            let graus = radiano.value*(180/Math.PI)
+            graus = graus.toFixed(2)
+            document.querySelector(".resposta").innerHTML = graus + "°"
+            radiano.value = "0"
+            radiano2.value = "1"
+        }
        }
+       
     </script>
 </html>
