@@ -157,7 +157,7 @@ span{
     background: whitesmoke;
     color:var(--primary);
     cursor: pointer;
-    margin:1.5vw 1s5px;
+    margin:1.5vw 8px;
 }
 .btn:hover{
     transition: 0.2s;
