@@ -1,0 +1,205 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Diplomata+SC&family=K2D:wght@100;200;300&family=Open+Sans:wght@600&family=Poppins&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300&display=swap');
+/* reset */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{/*variaveis*/
+    --text: #0a0623;
+    --background: #DFEBFF;
+    --background2: #c9ddfd;
+    --primary: #1a6da8;
+    --secondary: #a394fa;
+    --accent: #57b41d;
+    --textdarktheme: #e0dcf9;
+    --backgrounddarktheme: #021636;
+    --backgrounddarktheme2: #021636;
+    --primarydarktheme: #57aae5;
+    --secondarydarktheme: #14056b;
+    --accentdarktheme: #85e24b;
+}
+body{
+    background-color: var(--background);
+    padding: 10px;
+    display: flex;
+    cursor: crosshair;
+}
+header{
+    min-width: 55px;
+    width: 6vw;
+    height: calc(100vh - 20px);
+    background-color: var(--background2);
+    border-radius: 8px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4vw;
+}
+main{
+    margin-left: 1vw;
+    width: 100vw;
+    height: calc(100vh - 20px);
+    background-color: var(--background2);
+    border-radius: 8px;
+    padding:6px 1.6vw;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+/*header*/
+.logo{
+    width:2vw;
+    height:2vw;
+    border-radius:50%;
+    margin-top: 1.3vw;
+    cursor: pointer;
+}
+.logo:hover{
+    transition: 0.3s;
+    transform: rotate(-360deg);
+}
+header a{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    border-radius: 30px;
+    padding: 0.53vw;
+}
+header a:hover{
+    background: var(--primary);
+}
+.caixa{
+    display:flex;
+    flex-direction: column;
+    height: 35vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.a,.b,.c,.d{
+    width:1.2vw;
+    height:1.2vw;
+}
+.pagvisivel{
+    background-color: var(--primary);
+}
+.info{
+    width: 4.4vw;
+    border-radius: 30px;
+    background: var(--accent);
+}
+.adicional{
+    margin-bottom:1.3vw;
+}
+/*main -> principal*/
+.titulo{
+    font-size: 1.4rem;
+    font-family: "Poppins",sans-serif;
+    font-weight:300;
+    margin-left: 0.4vw;
+}
+
+h1{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+p{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 80px;
+} 
+.but{
+    background-color: var(--primary);
+    width: 6vw;
+    padding: 1%;
+    border-radius: 20px;
+    margin-left: 40vw;
+    font-family: "Poppins", sans-serif;
+}
+.meubau{
+    display:flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.meubau a{
+    margin: 0.8vw 0.4vw;
+}
+#s123{
+    width: 24vw;
+    height: 16vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-family: "Poppins",sans-serif;
+    object-fit: cover;
+    padding: 0.2rem;
+    padding-left: 1rem;
+}
+.image{
+    width: 40%;
+    height: 70%;
+    align-items: center;
+}
+.image img{
+    max-width: 100%;
+    max-height:100%;
+}
+.s1{
+    background:var(--secondary);
+    color: var(--text);
+}
+.s2{
+    background:var(--accent);
+    color: var(--text);
+}
+.s3{
+    background:var(--primary);
+    color: var(--background);
+}
+#s123:hover .image img{
+    transition: .3s;
+    transform: rotate(10deg);
+}
+.text{
+    text-align: start;
+    padding-left: 0.7rem;
+    width: 57%;
+}
+.text :hover{
+    opacity: 0.8;
+}
+.text h1{
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.text p{
+    font-size: 0.8rem;
+}
+.caixa img{
+    animation: animacao 6s infinite;
+}
+@keyframes animacao{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.pi{
+    width: 64%;
+    margin-top:2vw;
+    margin-left: 2vw;
+}
