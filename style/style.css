@@ -68,7 +68,7 @@ header a{
     justify-content: center;
     align-items: center;
     width:100%;
-    border-radius: 30px;
+    border-radius: 1.9rem;
     padding: 0.53vw;
 }
 header a:hover{
