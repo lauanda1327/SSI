@@ -185,3 +185,40 @@ header a:hover{
     margin-top:2vw;
     margin-left: 2vw;
 }
+/*media queries for mobile*/
+
+/*media querie for computers*/
+
+  @media only screen and (max-width:900px) {
+    /*computers*/
+    #s123 {
+      min-width: 230px;
+      min-height:170px;
+      width: 160%;
+      height:32vh;
+    }
+    main{
+      height: inherit;
+    }
+    .text p{
+        font-size:1rem;
+    }
+    .text h1{
+        font-size:1.3rem;
+    }
+    .logo{
+        width:2rem;
+        height:2rem;
+    }
+    .a, .b, .c, .d {
+        width: 3vw;
+        height: 3vw;
+    }
+    header{
+        height:inherit;
+    }
+    .container{
+        min-height: 100vh;
+        overflow: auto;
+    }
+  }
