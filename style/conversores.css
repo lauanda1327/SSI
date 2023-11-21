@@ -261,3 +261,61 @@
       left:36vw;
       text-align:center;
   }
+  /*media querie for computers*/
+  @media only screen and (max-width:900px) {
+    /*computers*/
+    #s123 {
+      max-width: 450px;
+      max-height:350px;
+      width: 160%;
+      height:28vh;
+    }
+    main{
+      height: inherit;
+    }
+    .text p{
+        font-size:1rem;
+    }
+    .text h1{
+        font-size:1.3rem;
+    }
+    .logo{
+        width:2rem;
+        height:2rem;
+    }
+    .a, .b, .c, .d {
+        width: 3vw;
+        height: 3vw;
+    }
+    header{
+        height:inherit;
+    }
+    .container{
+        min-height: 100vh;
+        overflow: auto;
+    }
+  }
+  /*media queries for mobile*/
+ @media only screen and (max-width:600px) {
+    #s123 {
+        width: 160%;
+        height:22vh;
+        border-radius:13px;
+        margin:3px;
+    }
+    .a, .b, .c, .d {
+        width: 4vw;
+        height: 4vw;
+    }
+    .image img{ 
+        max-width: 113%;
+        max-height: 113%;
+    }
+    .text {
+        padding-left: 1.3rem;
+        width: 60%;
+    }
+    .titulo{
+        margin-bottom: 2px;
+    }
+ }
