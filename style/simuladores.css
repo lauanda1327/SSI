@@ -188,7 +188,7 @@ header a:hover{
 }
 .info{
     width: 4.4vw;
-    border-radius: 8px;
+    border-radius: 30px;
     background: var(--accent);
 }
 .adicional{
