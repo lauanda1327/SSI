@@ -212,11 +212,13 @@
       left:30vw;
   }
   .container4 button{
-      font-family: "Poppins";
+      font-family: "Poppins",sans-serif;
       background:var(--primary); 
-      border-radius: 16px;
+      border-radius: 50px;
       border:inherit;
       width:7vw;
+      min-height: 45px; 
+      min-width: 100px;
       cursor: pointer;
       color:whitesmoke;
       height:2.6vw;
@@ -224,6 +226,9 @@
       top: 55vh;
       left:28vw;
   }
+.container4 button:focus{ 
+    transform: scale(0.90);
+}
   .container4 #inputpi{
       width:10vw;
       padding:0.3rem 0;
@@ -270,9 +275,6 @@
       width: 160%;
       height:28vh;
     }
-    main{
-      height: inherit;
-    }
     .text p{
         font-size:1rem;
     }
@@ -286,9 +288,6 @@
     .a, .b, .c, .d {
         width: 3vw;
         height: 3vw;
-    }
-    header{
-        height:inherit;
     }
     .container{
         min-height: 100vh;
