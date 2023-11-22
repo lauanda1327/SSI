@@ -1,4 +1,12 @@
-//codigo javascript
+const telaCanva = document.querySelector("#canvas");
+const elementoPaiDoCanva = document.querySelector(".container");
+alturaPai = elementoPaiDoCanva.clientHeight
+larguraPai = elementoPaiDoCanva.clientWidth
+telaCanva.setAttribute("width",larguraPai);
+telaCanva.setAttribute("height",alturaPai);
+
+
+
 //cor padrão da linha, tela e pendulo(objeto)
 let corPadrao = "#efefef";
 let background = "#8cb6e0";
@@ -76,6 +84,7 @@ function desenharObj(cor) {
     ctx.fillStyle = cor;
     ctx.beginPath()
     ctx.arc(x, y, 16, 0, 2 * Math.PI)
+    //outras formas
     //ctx.strokeRect(x-15,y,30,30)
     //ctx.fillRect(x-15,y,30,30)
     //ctx.drawImage(img, 10, 10, 150, 180);
@@ -83,7 +92,6 @@ function desenharObj(cor) {
 }
 
 function desenharLinha(x1, y1, x2, y2, cor) {
-    // ctx.strokeRect(300,y,30,30) - massa mola
     //desenhar a linha
     ctx.fillStyle = cor;
     ctx.strokeStyle = cor;
@@ -93,8 +101,8 @@ function desenharLinha(x1, y1, x2, y2, cor) {
     ctx.stroke();
     //desenhar local onde a linha esta presa
     ctx.fillStyle = cor;
-    ctx.fillRect(xc - 90, yc - 5, 180, 7);
-    ctx.fillRect(xc - 20, yc, 40, 12);
+    ctx.fillRect(xc - 90, yc - 5, 180, 8);
+    ctx.fillRect(xc - 20, yc, 40, 9);
 }
 
 function desenharTela() {
