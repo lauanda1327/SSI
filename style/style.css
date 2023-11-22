@@ -26,6 +26,7 @@ body{
     padding: 10px;
     display: flex;
     cursor: crosshair;
+    overflow-y: hidden;
 }
 header{
     min-width: 55px;
@@ -198,14 +199,12 @@ a:focus{
       width: 150%;
       height: 26vh;
     }
-    main{
-      height: inherit;
-    }
     .text p{
         font-size:1rem;
     }
     .text h1{
-        font-size:1.3rem;
+        font-size: 1.1rem;
+        font-weight:500;
     }
     .logo{
         width:2rem;
@@ -214,9 +213,6 @@ a:focus{
     .a, .b, .c, .d {
         width: 2.2vw;
         height: 2.2vw;
-    }
-    header{
-        height:inherit;
     }
     .container{
         min-height: 100vh;

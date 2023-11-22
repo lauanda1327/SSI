@@ -229,9 +229,6 @@ a:focus{
       width: 160%;
       height:28vh;
     }
-    main{
-      height: inherit;
-    }
     .text p{
         font-size:1rem;
     }
@@ -245,9 +242,6 @@ a:focus{
     .a, .b, .c, .d {
         width: 3vw;
         height: 3vw;
-    }
-    header{
-        height:inherit;
     }
     .container{
         min-height: 100vh;
