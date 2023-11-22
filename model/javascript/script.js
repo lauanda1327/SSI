@@ -15,7 +15,7 @@ let corda = localStorage.getItem("corda");
 // ângulo inicial
 let ang0 = localStorage.getItem("ang0");
 // Ponto onde a corda está presa
-let xc = 400;
+let xc = larguraPai/2;//meio
 let yc = 15;
 // coordenadas do pêndulo
 let x;
