@@ -79,12 +79,8 @@ main{
     position:absolute;
     left:50%;
 }
-#canvas{
-    width: 800px;
-    height: 500px;
-}
-#canvas2{
-   
+
+#canvas2{  
     transform: rotate(-90deg);
     width: 500px;
     position:absolute;
@@ -119,6 +115,7 @@ label{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    overflow: hidden;
 }
 .configuracao{
     display:flex;
@@ -251,11 +248,6 @@ span{
     .a, .b, .c, .d {
         width: 3vw;
         height: 3vw;
-    }
-
-    .container{
-        min-height: 100vh;
-        overflow: auto;
     }
   }
   /*media queries for mobile*/
