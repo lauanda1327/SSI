@@ -18,7 +18,7 @@ if(larguraPai < 600){
 
 
   // Ponto onde a corda2 está presa
-  let xc = 300;
+  let xc = larguraPai/2;
   let yc = 35;
   // coordenadas do pêndulo
   let x; 
@@ -94,7 +94,7 @@ let bancoDeDadosNaoExiste = localStorage.getItem("corda2") == null || localStora
      // desenhar obj
       ctx.fillStyle = cor;
       ctx.strokeStyle = cor;
-      ctx.strokeRect(300 - 15, y, 30,30)
+      ctx.strokeRect(larguraPai/2 - 15, y, 30,30)
       //ctx.strokeRect(x-15,y,30,30)
       //ctx.fillRect(x-15,y,30,30)
       //ctx.drawImage(img, 10, 10, 150, 180);
