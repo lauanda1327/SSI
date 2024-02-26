@@ -3,20 +3,22 @@ const elementoPaiDoCanva = document.querySelector(".container");
 alturaPai = elementoPaiDoCanva.clientHeight
 larguraPai = elementoPaiDoCanva.clientWidth
 telaCanva.setAttribute("width",larguraPai);
-telaCanva.setAttribute("height",alturaPai);
-
-
-
+telaCanva.setAttribute("height",alturaPai/1.1);
+if(larguraPai < 600){
+    telaCanva.setAttribute("width",larguraPai);
+    telaCanva.setAttribute("height",alturaPai / 1.8);
+}
 //cor padrão da linha, tela e pendulo(objeto)
-let corPadrao = "#efefef";
-let background = "#8cb6e0";
+let corPadrao = "#000000";
+let background = "#f5e1f1"
 // comprimento da corda
 let corda = localStorage.getItem("corda");
 // ângulo inicial
 let ang0 = localStorage.getItem("ang0");
 // Ponto onde a corda está presa
 let xc = larguraPai/2;//meio
-let yc = 15;
+let yc = 8;
+
 // coordenadas do pêndulo
 let x;
 let y;

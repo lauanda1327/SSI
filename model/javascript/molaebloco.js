@@ -1,76 +1,22 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style/simuladores.css">
-    <title>SSI - Pêndulo</title>
-  </head>
-  <body onload="init();">
-    <header>
-        <!-- Todo o código do header/nav aqui...por favor -->
-        <img src="../../model/icons/logo.png" alt="logo do site" class="logo">
-        <div class="caixa">
-            <a href="../../index.html"><img src="../../model/icons/a.png" alt="link 1" class="a"></a>
-            <a href="../calculadora.html"><img src="../../model/icons/b.png" alt="link 2" class="b"></a>
-            <a href="../informacoes.html"><img src="../../model/icons/c.png" alt="link 3" class="c"></a>
-        </div>
-        <div class="adicional">
-            <a href="#" class="info"><img src="../../model/icons/d.png" alt="link 4" class="d"></a>
-        </div>
-    </header>
-    <main>
-        <div class="linha1"></div>
-        <div class="linha2"></div>
-        <div class="container">
-            <!-- Todo o código do main aqui...por favor -->
-            <canvas width="800" height="500" id="canvas"></canvas>
-        </div>
-        <div class="configuracao">
-            <div id="controle">
-                <div class="caixa2">
-                  <span>Linha:</span>
-                  <input type="number" id="tamCorda" value="300" min="0" max="1000" onfocus="this.value='';"/>
-                </div>
-                <div class="caixa2">
-                  <span>Variação:</span>
-                  <input type="number" id="angInicial" value="20" min="1" max="89" onfocus="this.value='';"/>
-                </div>
-                <div class="caixa2">
-              <span>Cor do teto:</span>
-              <input type="text" id="corfixo2" value="white"  onfocus="this.value='';"/>
-            </div>
-            <div class="caixa2">
-              <span>Cor da Linha:</span>
-              <input type="text" id="corLinha2" value="white"  onfocus="this.value='';"/>
-            </div>
-            <div class="caixa2">
-              <span>Cor do Objeto:</span>
-              <input type="text" id="corObj2" value="white"  onfocus="this.value='';"/>
-            </div>
-            
-              <button class="btn" onclick="desenharTela()">Aplicar</button>
-              <button class="btn" onclick="resetar()">Resetar</button>
-            </div>
-             <div class="controle2">
-            <span>Velocidade:</span><br />
-            <input type="radio" id="velocidade" name="velocidade" value="normal"/>
-            <label for="normal">Normal</label><br />
-            <input type="radio" id="velocidade" name="velocidade" value="devagar" />
-            <label for="devagar">Devagar</label><br />
-            </div>
-        </div>
-  </body>
-
-  <script type="text/javascript">
+const telaCanva = document.querySelector("#canvas");
+const elementoPaiDoCanva = document.querySelector(".container");
+alturaPai = elementoPaiDoCanva.clientHeight
+larguraPai = elementoPaiDoCanva.clientWidth
+telaCanva.setAttribute("width",larguraPai);
+telaCanva.setAttribute("height",alturaPai/1.1);
+if(larguraPai < 600){
+    telaCanva.setAttribute("width",larguraPai);
+    telaCanva.setAttribute("height",alturaPai / 1.8);
+}
   //cor padrão da linha, tela e pendulo(objeto)
-  let corPadrao = "#efefef";
-  let background = "#8cb6e0";
+  let corPadrao = "#000000";
+  let background = "#f5e1f1";
   // comprimento da corda2
   let corda2 = localStorage.getItem("corda2");
   // ângulo inicial
   let ang02 = localStorage.getItem("ang02");
+
+
   // Ponto onde a corda2 está presa
   let xc = 300;
   let yc = 35;
@@ -222,5 +168,3 @@ let bancoDeDadosNaoExiste = localStorage.getItem("corda2") == null || localStora
                 }
             }
         }
-  </script>
-</html>
