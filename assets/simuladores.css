@@ -167,7 +167,7 @@ header a:hover{
     background:rgb(17, 0, 255);
     border-radius:50%;
     z-index:1;
-    animation: mercurio infinite linear 10s;
+    animation: mercurio infinite linear 10s;/*53954ms*/
 }
 @keyframes mercurio{
     0%{

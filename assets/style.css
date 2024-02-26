@@ -286,13 +286,14 @@ a:focus{
     .latest{
        position:static;
        margin-top: 2vw;
+       margin:12px;
     }
     header{
         height:10vh;
         width:100%;
         margin-bottom: 8px;
         flex-direction: row;
-        padding:0.8rem;
+        padding:1rem;
     }
     main{
         width: 100%;
