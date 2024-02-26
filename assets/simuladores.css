@@ -1,25 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Diplomata+SC&family=K2D:wght@100;200;300&family=Open+Sans:wght@600&family=Poppins&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300&display=swap');
-/* reset */
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-:root{/*variaveis*/
-    --text: #0a0623;
-    --background: #DFEBFF;
-    --background2: #c9ddfd;
-    --primary: #1a6da8;
-    --secondary: #a394fa;
-    --accent: #57b41d;
-    --textdarktheme: #e0dcf9;
-    --backgrounddarktheme: #021636;
-    --backgrounddarktheme2: #021636;
-    --primarydarktheme: #57aae5;
-    --secondarydarktheme: #14056b;
-    --accentdarktheme: #85e24b;
-}
 .caixa{
     display:flex;
     flex-direction: column;
@@ -36,30 +14,10 @@
     align-items: center;
     justify-content: space-evenly;
 }
-
-body{
-    background-color: var(--background);
-    padding: 10px;
-    display: flex;
-    cursor: crosshair;
-}
-header{
-    min-width: 55px;
-    width: 6vw;
-    height: calc(100vh - 20px);
-    background-color: var(--background2);
-    border-radius: 8px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.4vw;
-}
 main{
     margin-left: 1vw;
     width: 100vw;
     height: calc(100vh - 20px);
-    background-color: var(--background2);
     border-radius: 8px;
     padding:1vw 1.6vw;
     display:flex;
@@ -102,15 +60,12 @@ main{
 label{
     display: inline-block;
 }
-.caixatrue{
-    margin:1rem auto;
-}
+
 .container{
     padding:30px 5px; 
     position: relative;
     width: 80%;
     height:100%;
-    background-color: #8cb6e0;
     border-radius:0.5vw;
     display: flex;
     align-items: flex-start;
@@ -191,6 +146,37 @@ header a:hover{
 .adicional{
     margin-bottom:1.3vw;
 }
+/*sistema solar*/
+.container_do_sistema_solar{
+    width:100%;
+    display:flex;
+    align-content:center;
+    justify-content: center;
+}
+.sol{
+    width:100px;
+    height:100px;
+    background:rgb(255, 174, 0);
+    border-radius:50%;
+}
+.planeta{
+    margin-top:40px;
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:rgb(17, 0, 255);
+    border-radius:50%;
+    z-index:1;
+    animation: mercurio infinite linear 10s;
+}
+@keyframes mercurio{
+    0%{
+        transform: rotate(0deg) translate(100px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(100px) rotate(360deg);
+    }
+}
 /*main -> principal*/
 .titulo{
     font-size: 1.35rem;
@@ -219,9 +205,6 @@ header a:hover{
 }
 .s3{
     background:var(--primary);
-}
-input[type=range] {
-    height: 2px;
 }
 span{
     margin:15px;

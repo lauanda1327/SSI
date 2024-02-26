@@ -7,39 +7,86 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-:root{/*variaveis*/
+/*:root{
     --text: #0a0623;
     --background: #DFEBFF;
     --background2: #c9ddfd;
     --primary: #1a6da8;
     --secondary: #a394fa;
     --accent: #57b41d;
-    --textdarktheme: #e0dcf9;
-    --backgrounddarktheme: #021636;
-    --backgrounddarktheme2: #021636;
-    --primarydarktheme: #57aae5;
-    --secondarydarktheme: #14056b;
-    --accentdarktheme: #85e24b;
+}*/
+
+:root{
+
+    --sistemasolar: #9F2850;
+    --text: #16061d;
+    --background2: #F5E1F1;
+    --primary: #863DCF;
+    --secondary: #E28ABF;
+    --accent: #D86189;
+    --background: #FAF7FD;  
+    --latestBackground: #ffffff30;
+    --c: url("../model/icons/c.png");
+}
+.dark-mode{
+    --text:#F2E1F9;
+    --background2: #1F0A1B;
+    --primary: #863DCF;
+    --secondary: #761E53;
+    --accent: #9F2850;
+    --background: #19081d;
+    
+}
+.light-mode{
+    --texto: #1 0041b;
+    --fundo: #f9f3fd;
+    --primário: #9533e4;
+    --secundário: #f0958d;
+    --acento: #e8a750;
 }
 body{
     background-color: var(--background);
     padding: 10px;
     display: flex;
     cursor: crosshair;
-    overflow-y: hidden;
+    overflow-y: auto;
+    position:relative;/*24/02*/
+    z-index:2;
 }
-header{
+.latest {
+    color:rgb(10, 1, 31);
+    cursor: pointer;
+    position:absolute;
+    top:3.2vw;
+    font-family:'Poppins';
+    right: 4vw;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid #c5a4e6db;
+    width: fit-content;
+    border-radius: 0.5rem;
+    background: var(--latestBackground);
+    transition: opacity ease 0.3s;
+    font-size: calc(0.8rem / 1.333);
+    opacity: 100%;
+    z-index: 1;
+}
+.latest:hover{
+    transition: .3s;
+    background:#efdbf4;
+}
+header {
     min-width: 55px;
     width: 6vw;
     height: calc(100vh - 20px);
     background-color: var(--background2);
     border-radius: 8px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 0.4vw;
 }
+
 main{
     margin-left: 1vw;
     width: 100vw;
@@ -60,10 +107,6 @@ main{
     margin-top: 1.3vw;
     cursor: pointer;
 }
-.logo:hover{
-    transition: 0.3s;
-    transform: rotate(-360deg);
-}
 header a{
     display:flex;
     justify-content: center;
@@ -72,6 +115,7 @@ header a{
     border-radius: 1.9rem;
     padding: 0.53vw;
 }
+
 header a:hover{
     background: var(--primary);
 }
@@ -82,10 +126,21 @@ header a:hover{
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
+
 }
+
 .a,.b,.c,.d{
     width:1.2vw;
     height:1.2vw;
+}
+.c{
+    background-image: var(--c);
+    background-position: center;
+}
+
+
+.logo{
+    animation: animacao 6s infinite;
 }
 .pagvisivel{
     background-color: var(--primary);
@@ -104,6 +159,7 @@ header a:hover{
     font-family: "Poppins",sans-serif;
     font-weight:300;
     margin-left: 0.4vw;
+    margin-top:0.5rem;
 }
 
 .meubau{
@@ -130,14 +186,18 @@ a:focus{
     padding: 0.2rem;
     padding-left: 1rem;
 }
-.image{
+.image,.image2{
     width: 40%;
     height: 70%;
     align-items: center;
 }
 .image img{
     max-width: 100%;
-    max-height:100%;
+    max-height: 100%;
+} 
+.setas{
+    max-height:80%;
+    max-width: 80%;
 }
 .s1{
     background:var(--secondary);
@@ -170,14 +230,12 @@ a:focus{
 .text p{
     font-size: 0.8rem;
 }
-.caixa img{
-    animation: animacao 6s infinite;
-}
+
 @keyframes animacao{
     0%{
         transform: rotate(0deg);
     }
-    25%{
+    27%{
         transform: rotate(360deg);
     }
     100%{
@@ -221,15 +279,41 @@ a:focus{
   }
   /*media queries for mobile*/
  @media only screen and (max-width:600px) {
+    body{
+        flex-direction:column;
+        padding:12px;
+    }
+    .latest{
+       position:static;
+       margin-top: 2vw;
+    }
+    header{
+        height:10vh;
+        width:100%;
+        margin-bottom: 8px;
+        flex-direction: row;
+        padding:0.8rem;
+    }
+    main{
+        width: 100%;
+        margin:0;
+    }
+    header a{
+        width:10vw;
+    }
+    .caixa{
+        flex-direction: row;
+        width:60%;
+    }
     #s123 {
         width: 160%;
-        height:22vh;
+        height:28vh;
         border-radius:13px;
         margin:3px;
     }
     .a, .b, .c, .d {
-        width: 4vw;
-        height: 4vw;
+        width: 3.5vw;
+        height: 3.5vw;
     }
     .image img{ 
         max-width: 113%;
@@ -246,5 +330,14 @@ a:focus{
         max-width: 100%;
         max-height: 100%;
         margin: inherit;
+    }
+ }
+ @media (min-width: 1600px) {
+    .text h1{
+        font-size: calc(1.25rem/0.8);
+        font-weight: 300;
+    }
+    .text p{
+        font-size: calc(0.8rem/0.8);
     }
  }

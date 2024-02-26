@@ -4,22 +4,20 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="assets/style.css">
         <title>SSI</title>
     </head>
     <body>
-        <div class="loader" id="loader">
-        </div>
         <header>
             <!-- Todo o código do header/nav aqui...por favor -->
             <img src="model/icons/logo.png" alt="logo do site" class="logo">
             <div class="caixa">
-                <a href="" class="pagvisivel"><img src="model/icons/a.png" alt="link 1" class="a"></a>
-                <a href="assents/calculadora.html"><img src="model/icons/b.png" alt="link 2" class="b"></a>
-                <a href="assents/informacoes.html"><img src="model/icons/c.png" alt="link 3" class="c"></a>
+                <a href=""><img src="model/icons/a.png" class="a"></a>
+                <a href="components/calculadora.html"><img src="model/icons/b.png" class="b"></a>
+                <a href="components/informacoes.html"><img src="model/icons/c.png" class="c"></a>
             </div>
             <div class="adicional">
-                <a href="#" class="info"><img src="model/icons/d.png" alt="link 4" class="d"></a>
+                <a href="./components/configuracao/settings.html" class="info"><img src="model/icons/d.png" alt="link 4" class="d"></a>
             </div>
         </header>
         <main>
@@ -27,7 +25,7 @@
                 <!-- Todo o código do main aqui...por favor -->
                 <h1 class="titulo">Simulador</h1>
                 <div class="meubau">
-                    <a href="assents/paginasSimuladores/massamola.html">
+                    <a href="components/paginasSimuladores/massamola.html">
                         <div class="s1" id="s123">
                             <div class="image">
                                 <img src="model/icons/mola.png" alt="mola">
@@ -38,7 +36,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="assents/paginasSimuladores/pendulo.html">
+                    <a href="components/paginasSimuladores/pendulo.html">
                         <div class="s2" id="s123">
                             <div class="image">
                                 <img src="model/icons/pendulo.png" alt="pêndulo">
@@ -49,7 +47,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="assents/paginasSimuladores/molaebloco.html">
+                    <a href="components/paginasSimuladores/molaebloco.html">
                         <div class="s3" id="s123">
                             <div class="image">
                                 <img src="model/icons/molaebloco.png" alt="mola com bloco">
@@ -60,62 +58,12 @@
                             </div>
                         </div>
                     </a>
-                    
+                    <a href="components/configuracao/lancamento.html" class="latest">V3.7 - 26 de fevereiro de 2024</a>
                 </div>
             </div>
 
         </main>
     </body>
     <script>
-        /*const loader = {
-    __loader: null,
-    show: function () {
-
-        if (this.__loader == null) {
-            var divContainer = document.createElement('div');
-            divContainer.style.position = 'fixed';
-            divContainer.style.left = '0';
-            divContainer.style.top = '0';
-            divContainer.style.width = '100%';
-            divContainer.style.height = '100%';
-            divContainer.style.zIndex = '9998';
-            divContainer.style.backgroundColor = 'rgba(201, 221, 253, 0.70)';//#c9ddfd
-
-            var div = document.createElement('div');
-            div.style.position = 'absolute';
-            div.style.left = '50%';
-            div.style.top = '50%';
-            div.style.zIndex = '9999';
-            div.style.height = '64px';
-            div.style.width = '64px';
-            div.style.margin = '-76px 0 0 -76px';
-            div.style.border = '8px solid rgba(26, 109, 168, 0.70)';
-            div.style.borderRadius = '50%';
-            div.style.borderTop = '8px solid rgba(250, 250, 250, 0.80)';
-            div.animate([
-                { transform: 'rotate(0deg)' },
-                { transform: 'rotate(360deg)' }
-              ], {
-                duration: 2000,
-                iterations: Infinity
-              });
-            divContainer.appendChild(div);
-            this.__loader = divContainer
-            document.body.appendChild(this.__loader);
-        }
-        this.__loader.style.display="";
-    },
-    hide: function(){
-        if(this.__loader!=null)
-        {
-            this.__loader.style.display="none";
-        }
-    }
-}
-
-        loader.show();
-        setTimeout(() => {
-            loader.hide();
-        }, 3000);*/
         </script>
 </html>

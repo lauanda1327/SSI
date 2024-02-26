@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style/simuladores.css">
+    <link rel="stylesheet" href="../../assets/simuladores.css">
+    <link rel="stylesheet" href="../../assets/style.css">
     <title>SSI - Pêndulo</title>
 </head>
 <body onload="init()">
@@ -13,17 +14,16 @@
         <!-- Todo o código do header/nav aqui...por favor -->
         <img src="../../model/icons/logo.png" alt="logo do site" class="logo">
         <div class="caixa">
-            <a href="../../index.html"><img src="../../model/icons/a.png" alt="link 1" class="a"></a>
-            <a href="../calculadora.html"><img src="../../model/icons/b.png" alt="link 2" class="b"></a>
-            <a href="../informacoes.html"><img src="../../model/icons/c.png" alt="link 3" class="c"></a>
+            <a href="../../index.html"><img src="../../model/icons/a.png" class="a"></a>
+            <a href="../calculadora.html"><img src="../../model/icons/b.png" class="b"></a>
+            <a href="../informacoes.html"><img src="../../model/icons/c.png" class="c"></a>
         </div>
         <div class="adicional">
             <a href="#" class="info"><img src="../../model/icons/d.png" alt="link 4" class="d"></a>
         </div>
     </header>
     <main>
-        <div class="linha1"></div>
-        <div class="linha2"></div>
+
         <div class="container">
             <!-- Todo o código do main aqui...por favor -->
             <canvas width="800" height="500" id="canvas"></canvas>
@@ -32,19 +32,18 @@
             <!-- Todo o código do main aqui...por favor -->
             <div id="controle">
                 <div class="caixatrue">
-                    <span class="sp">Tamanho Da Corda: 300
+                    <span class="sp">Comprimento:
                     </span>
-                    
-                    <input type="range" id="tamCorda" value="300" min="1" max="900" onchange="showVal2(this.value)">
+                    <input type="number" id="tamCorda" value="250" min="10" max="900" onchange="showVal2(this.value)">
                 </div>
                 <div class="caixatrue">
-                    <span class="ap">Ângulo Inicial: 20
+                    <span class="ap">Ângulo Inicial:
                     </span>
-                    <input type="range" id="angInicial" value="20" min="1" max="89" onchange="showVal(this.value)">
+                    <input type="number" id="angInicial" value="20" min="1" max="89" onchange="showVal(this.value)">
                 </div>
                 <div class="caixatrue">
                     <label for="corfixo">Color:</label>
-                    <input type="color" id="corfixo" value="#efefef"/>
+                    <input type="color" id="corfixo" value="#000000"/>
                 </div>
                 <div class="dad">
                     <button class="btn" onclick="desenharTela()">Aplicar</button>
@@ -64,6 +63,6 @@
             </div>
         </div>
     </main>
-    <script src="../../model/javascript/script.js"></script>
+    <script src="../../model/javascript/pendulo.js"></script>
 </body>
 </html>
