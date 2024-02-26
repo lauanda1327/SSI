@@ -285,15 +285,14 @@ a:focus{
     }
     .latest{
        position:static;
-       margin-top: 2vw;
        margin:12px;
     }
     header{
         height:10vh;
         width:100%;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
         flex-direction: row;
-        padding:1rem;
+        padding:1.2rem;
     }
     main{
         width: 100%;
@@ -305,16 +304,24 @@ a:focus{
     .caixa{
         flex-direction: row;
         width:60%;
+        justify-content:space-between;
     }
     #s123 {
         width: 160%;
         height:28vh;
         border-radius:13px;
         margin:3px;
+        padding:1rem;
     }
     .a, .b, .c, .d {
-        width: 3.5vw;
-        height: 3.5vw;
+        width: 4vw;
+        height: 4vw;
+    }
+    .a:hover, .b:hover, .c:hover, .d:hover{
+       background: inherit;
+    }
+    .d,.info{
+        display:none;
     }
     .image img{ 
         max-width: 113%;
@@ -325,7 +332,9 @@ a:focus{
         width: 60%;
     }
     .titulo{
-        margin-bottom: 2px;
+        margin: 0.5rem;
+        font-size:1.1rem;
+        font-weight:700;
     }
     .pi{
         max-width: 100%;
