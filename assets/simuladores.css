@@ -76,7 +76,6 @@ label{
     display:flex;
     flex-direction: column;
     align-items: center;
-    
     padding: 4px;
     overflow-y: auto;
     cursor: default;
@@ -85,6 +84,20 @@ label{
     height:100%;
     background-color: #1a6da859;/*transparent*/
     border-radius:0.5vw;
+}
+.configuracao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+    overflow-y: auto;
+    cursor: default;
+    position: relative;
+    width: 100%;
+    height: 7vh;
+    background-color: #1a6da859;
+    border-radius: 0.5vw;
+    position: absolute;
 }
 
 span{
@@ -159,22 +172,159 @@ header a:hover{
     background:rgb(255, 174, 0);
     border-radius:50%;
 }
-.planeta{
-    margin-top:40px;
+.mercurio{
+    margin-top:45px;
+    position:absolute;
+    width:10px;
+    height:10px;
+    background-image: linear-gradient(to bottom right,rgb(41, 40, 39), rgb(96, 12, 5));
+    border-radius:50%;
+    z-index:1;
+    animation: translacaom infinite linear 6.3s;
+}
+/*ex: mercurio = 88 dias , converte para minutos e divide por dois*/
+.venus{
+    margin-top:45px;
     position:absolute;
     width:20px;
     height:20px;
-    background:rgb(17, 0, 255);
+    background-image: linear-gradient(to bottom right,rgb(213, 89, 0), rgb(172, 117, 15));
     border-radius:50%;
     z-index:1;
-    animation: mercurio infinite linear 10s;/*53954ms*/
+    animation: translacaov infinite linear 18.26s;
 }
-@keyframes mercurio{
+.terra{
+    margin-top:42px;
+    position:absolute;
+    width:18px;
+    height:18px;
+    background-image: linear-gradient(to bottom right,rgb(0, 103, 213), rgb(15, 172, 15),rgb(0, 103, 213),rgb(0, 103, 213));
+    border-radius:50%;
+    z-index:1;
+    animation: translacaot infinite linear 26.13s;
+}
+.marte{
+    margin-top:40px;
+    position:absolute;
+    width:16px;
+    height:16px;
+    background-image: linear-gradient(to bottom right,rgb(213, 89, 0), rgb(172, 28, 15));
+    border-radius:50%;
+    z-index:1;
+    animation: translacaomar infinite linear 49.1s;
+}
+.jupiter{
+    margin-top:30px;
+    position:absolute;
+    width:36px;
+    height:36px;
+    background-image: linear-gradient(to bottom right,rgb(202, 202, 202), rgb(172, 112, 15),rgb(202, 202, 202));
+    border-radius:50%;
+    z-index:1;
+    animation: translacaoj infinite linear  310.1s;
+}
+.anel_de_saturno{
+    margin-top:30px;
+    position:absolute;
+    background: transparent;
+    width:31px;
+    z-index:2;
+    height:12px;
+    border-radius:50%;
+    animation: translacaos infinite linear 712.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:4px solid rgb(169, 169, 169);
+}
+.saturno{
+    width:17px;
+    height:17px;
+    background-image: linear-gradient(to bottom right,rgb(202, 202, 202), rgb(200, 153, 77),rgb(202, 202, 202));
+    border-radius:50%;
+}
+.urano{
+    margin-top:40px;
+    position:absolute;
+    width:23px;
+    height:23px;
+    background-image: linear-gradient(to bottom right, rgb(147, 188, 186),rgb(202, 202, 202));
+    border-radius:50%;
+    z-index:1;
+    animation: translacaou infinite linear 2136.8s;
+}
+.netuno{
+    margin-top:40.5px;
+    position:absolute;
+    width:22.5px;
+    height:22.5px;
+    background-image: linear-gradient(rgb(24, 38, 117),rgb(67, 98, 169));
+    border-radius:50%;
+    z-index:1;
+    animation: translacaon infinite linear 4273.9s;
+}
+@keyframes translacaom{
     0%{
-        transform: rotate(0deg) translate(100px) rotate(0deg);
+        transform: rotate(0deg) translate(60.8px) rotate(0deg);
     }
     100%{
-        transform: rotate(360deg) translate(100px) rotate(360deg);
+        transform: rotate(360deg) translate(60.8px) rotate(360deg);
+    }
+}
+@keyframes translacaov{
+    0%{
+        transform: rotate(0deg) translate(85px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(85px) rotate(360deg);
+    }
+}
+@keyframes translacaot{
+    0%{
+        transform: rotate(0deg) translate(115px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(115px) rotate(360deg);
+    }
+}
+@keyframes translacaomar{
+    0%{
+        transform: rotate(0deg) translate(140px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(140px) rotate(360deg);
+    }
+}
+@keyframes translacaoj{
+    0%{
+        transform: rotate(0deg) translate(170px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(170px) rotate(360deg);
+    }
+}
+@keyframes translacaos{
+    0%{
+        transform: rotate(0deg) translate(210px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(210px) rotate(360deg);
+    }
+}
+@keyframes translacaou{
+    0%{
+        transform: rotate(0deg) translate(245px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(245px) rotate(360deg);
+    }
+}
+@keyframes translacaon{
+    0%{
+        transform: rotate(0deg) translate(280px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(280px) rotate(360deg);
     }
 }
 /*main -> principal*/
@@ -233,6 +383,71 @@ span{
         height: 3vw;
     }
   }
+  
+@keyframes translacaom2{
+    0%{
+        transform: rotate(0deg) translate(40.8px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(40.8px) rotate(360deg);
+    }
+}
+@keyframes translacaov2{
+    0%{
+        transform: rotate(0deg) translate(45px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(45px) rotate(360deg);
+    }
+}
+@keyframes translacaot2{
+    0%{
+        transform: rotate(0deg) translate(60px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(60px) rotate(360deg);
+    }
+}
+@keyframes translacaomar2{
+    0%{
+        transform: rotate(0deg) translate(70px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(70px) rotate(360deg);
+    }
+}
+@keyframes translacaoj2{
+    0%{
+        transform: rotate(0deg) translate(85px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(85px) rotate(360deg);
+    }
+}
+@keyframes translacaos2{
+    0%{
+        transform: rotate(0deg) translate(105px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(105px) rotate(360deg);
+    }
+}
+@keyframes translacaou2{
+    0%{
+        transform: rotate(0deg) translate(122px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(122px) rotate(360deg);
+    }
+}
+@keyframes translacaon2{
+    0%{
+        transform: rotate(0deg) translate(140px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(140px) rotate(360deg);
+    }
+}
   /*media queries for mobile*/
  @media only screen and (max-width:600px) {
     #s123 {
@@ -256,4 +471,62 @@ span{
     .titulo{
         margin-bottom: 2px;
     }
+    .sol{
+        width:60px;
+        height:60px;
+    }
+    .mercurio{
+        margin-top:30px;
+        width:6px;
+        height:6px;
+        animation: translacaom2 infinite linear 6.3s;
+    }
+    .venus{
+        margin-top:22px;
+        width:10px;
+        height:10px;
+        animation: translacaov2 infinite linear 18.26s;
+    }
+     .terra{
+        margin-top:21px;
+        width:9px;
+        height:9px;
+        animation: translacaot2 infinite linear 26.13s;
+     }
+    .marte{
+        margin-top:20px;
+        width:8px;
+        height:8px;  
+        animation: translacaomar2 infinite linear 49.1s;
+    }
+    .jupiter{
+        margin-top:15px;
+        width:18px;
+        height:18px;
+        animation: translacaoj2 infinite linear  310.1s;
+    }
+    .anel_de_saturno{
+        margin-top:15px;
+        width:15px;
+        height:6px;
+        animation: translacaos2 infinite linear 712.6s;
+    }
+    .saturno{
+        width:8px;
+        height:8px;
+    }
+    .urano{
+        margin-top:20px;
+        width:11px;
+        height:11px;
+        animation: translacaou2 infinite linear 2136.8s;
+        
+    }
+    .netuno{
+        margin-top:20px;
+        width:11px;
+        height:11px;
+        animation: translacaon2 infinite linear 4273.9s;
+    }
+    
  }

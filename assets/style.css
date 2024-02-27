@@ -18,31 +18,26 @@
 
 :root{
 
-    --sistemasolar: #9F2850;
+    --accent2: #9F2850;
     --text: #16061d;
     --background2: #F5E1F1;
+    --background3: #F5E1F1;
     --primary: #863DCF;
     --secondary: #E28ABF;
     --accent: #D86189;
     --background: #FAF7FD;  
-    --latestBackground: #ffffff30;
+    --logo:url("../model/icons/logo.png");
     --c: url("../model/icons/c.png");
 }
 .dark-mode{
     --text:#F2E1F9;
     --background2: #1F0A1B;
-    --primary: #863DCF;
+    /*--primary: #863DCF;
     --secondary: #761E53;
     --accent: #9F2850;
+    --accent2: #e8454f;
     --background: #19081d;
-    
-}
-.light-mode{
-    --texto: #1 0041b;
-    --fundo: #f9f3fd;
-    --primário: #9533e4;
-    --secundário: #f0958d;
-    --acento: #e8a750;
+    --logo:url("../model/icons/logow.png");*/
 }
 body{
     background-color: var(--background);
@@ -57,7 +52,7 @@ body{
     color:rgb(10, 1, 31);
     cursor: pointer;
     position:absolute;
-    top:3.2vw;
+    bottom:2.5vw;
     font-family:'Poppins';
     right: 4vw;
     padding: 0.1rem 0.5rem;
@@ -78,7 +73,7 @@ header {
     min-width: 55px;
     width: 6vw;
     height: calc(100vh - 20px);
-    background-color: var(--background2);
+    background-color: var(--background3);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -99,13 +94,40 @@ main{
     position: relative;
     width: 100%;
 }
+#theme_button{
+    cursor:pointer;
+    width:16px;
+    height:16px;
+    animation:dice infinite 12s;
+    position:absolute;
+    z-index: 1;
+    top:2vw;
+    right:3vw;
+    border:inherit;
+    background:transparent;
+}
+@keyframes dice{
+    0%{
+        transform: rotate(0deg);
+    }
+    2%{
+        transform: rotate(180deg);
+    }
+    3%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
 /*header*/
 .logo{
-    width:2vw;
-    height:2vw;
-    border-radius:50%;
+    width:2rem;
+    height:2rem;
     margin-top: 1.3vw;
     cursor: pointer;
+    background-image: var(--logo);
+    background-position: center;
 }
 header a{
     display:flex;
@@ -165,7 +187,7 @@ header a:hover{
 .meubau{
     display:flex;
     flex-wrap: wrap;
-    width: 60%;
+    width: 80%;
 }
 .meubau a{
     margin: 0.8vw 0.4vw;
@@ -208,6 +230,10 @@ a:focus{
     color: var(--text);
 }
 .s3{
+    background:var(--accent2);
+    color: var(--background);
+}
+.s4{
     background:var(--primary);
     color: var(--background);
 }
@@ -248,7 +274,7 @@ a:focus{
     margin-left: 2vw;
 }
 /*media querie for computers*/
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 900px) {
     /*computers*/
     #s123 {
       border-radius: 15px;
@@ -281,7 +307,7 @@ a:focus{
  @media only screen and (max-width:600px) {
     body{
         flex-direction:column;
-        padding:12px;
+        padding:16px;
     }
     .latest{
        position:static;
@@ -293,18 +319,22 @@ a:focus{
         margin-bottom: 6px;
         flex-direction: row;
         padding:1.2rem;
+        border-radius:12px;
     }
     main{
         width: 100%;
+        border-radius:12px;
         margin:0;
     }
     header a{
         width:10vw;
     }
     .caixa{
+        height:inherit;
         flex-direction: row;
         width:60%;
         justify-content:space-between;
+        margin-left: 21vw;
     }
     #s123 {
         width: 160%;
@@ -314,8 +344,8 @@ a:focus{
         padding:1rem;
     }
     .a, .b, .c, .d {
-        width: 4vw;
-        height: 4vw;
+        width: 3.5vw;
+        height: 3.5vw;
     }
     .a:hover, .b:hover, .c:hover, .d:hover{
        background: inherit;

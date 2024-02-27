@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="../../assets/style.css">
     <title>SSI - Sistema Solar</title>
 </head>
-<body onload="init()">
+<body>
+    <button id="theme_button" onclick="button()"><img src="../../model/icons/paint.png"></button>
     <header>
         <!-- Todo o código do header/nav aqui...por favor -->
-        <img src="../../model/icons/logo.png" alt="logo do site" class="logo">
+        <div class="logo"><div></div></div>
         <div class="caixa">
             <a href="../../index.html"><img src="../../model/icons/a.png" class="a"></a>
             <a href="../calculadora.html"><img src="../../model/icons/b.png" class="b"></a>
@@ -25,13 +26,16 @@
     <main>
         <div class="container_do_sistema_solar">
             <div class="sol"></div>
-            <div class="planeta"></div>
-            <div class="planeta"></div>
-            <div class="planeta"></div>
-            <div class="planeta"></div>
-            <div class="planeta"></div>
-            <div class="planeta"></div>
-            <div class="planeta"></div>
+            <div class="mercurio"></div>
+            <div class="venus"></div>
+            <div class="terra"></div>
+            <div class="marte"></div>
+            <div class="jupiter"></div>
+            <div class="anel_de_saturno">
+                <div class="saturno"></div>
+            </div>
+            <div class="urano"></div>
+            <div class="netuno"></div>
         </div>
         <!-- Todo o código do main aqui...por favor -->
         <!-- <div class="configuracao"> -->
@@ -40,4 +44,5 @@
         <!-- </div> -->
     </main>
 </body>
+<script src="../../script.js"></script>
 </html>
