@@ -333,7 +333,9 @@ a:focus{
         width: 100%;
         border-radius:12px;
         margin:0;
+        min-height:calc(100vh - 20px);
         height: 100%;
+      
     }
     header a{
         width:10vw;
