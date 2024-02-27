@@ -1,5 +1,5 @@
-let icon = document.getElementById("theme_button")
 
-icon.onclick = function(){
-    document.body.classList.toogle("dark-mode")
+function button(){
+    let element = document.body;
+    element.classList.toggle("dark-mode");
 }
