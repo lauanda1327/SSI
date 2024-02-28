@@ -30,27 +30,32 @@
         </div>
         <div class="configuracao">
             <!-- Todo o código do main aqui...por favor -->
-            <div id="controle">
-                <div class="caixatrue">
-                    <span class="sp">Comprimento:
-                    </span>
-                    <input type="number" id="tamCorda" value="250" min="10" max="900" onchange="showVal2(this.value)">
-                </div>
-                <div class="caixatrue">
-                    <span class="ap">Ângulo Inicial:
-                    </span>
-                    <input type="number" id="angInicial" value="20" min="1" max="89" onchange="showVal(this.value)">
-                </div>
-                <div class="caixatrue">
-                    <label for="corfixo">Color:</label>
-                    <input type="color" id="corfixo" value="#000000"/>
-                </div>
-                <div class="dad">
-                    <button class="btn" onclick="desenharTela()">Aplicar</button>
-                    <button class="btn" onclick="resetar()">Resetar</button>
-                </div>
-            </div>
-            <div class="controle2">
+                    <div class="t1">
+                        <h6 class="sp">Comprimento:
+                        </h6>
+                        <input type="number" id="tamCorda" value="250" min="10" max="900" onchange="showVal2(this.value)">
+                    </div>
+                    <div class="t2">
+                        <h6 class="ap">Ângulo Inicial:
+                        </h6>
+                        <input type="number" id="angInicial" value="20" min="1" max="89" onchange="showVal(this.value)">
+                    </div>
+                    <div class="t3">
+                        <h6 for="corfixo">Cor:</h6>
+                        <input type="color" id="corfixo" value="#000000"/>
+                    </div>
+                    <div class="t4"></div>
+                    <div class="t5"></div>
+                    <div class="t6"></div>
+                    <div class="t7">
+                        <button class="btn" onclick="desenharTela()">Aplicar</button>
+                    </div>
+                    <div class="t8">
+                        <button class="btn" onclick="resetar()">Resetar</button>
+                    </div>
+                    
+                   
+            <!-- <div class="controle2">
                 <span>Velocidade:</span><br />
                 <div class="oi">
                     <input type="radio" id="velocidade" name="velocidade" value="normal" />
@@ -60,7 +65,7 @@
                     <input type="radio" id="velocidade" name="velocidade" value="devagar" />
                     <label for="devagar">Devagar</label><br />
                 </div>
-            </div>
+            </div> -->
         </div>
     </main>
     <script src="../../model/javascript/pendulo.js"></script>
