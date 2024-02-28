@@ -317,7 +317,7 @@ a:focus{
  @media only screen and (max-width:600px) {
     body{
         flex-direction:column;
-        padding:16px;
+        padding:12px;
     }
     .latest{
        position:static;
@@ -335,6 +335,9 @@ a:focus{
         width: 100%;
         border-radius:12px;
         margin:0;
+        min-height:calc(100vh - 20px);
+        height: 100%;
+      
     }
     header a{
         width:10vw;
@@ -347,9 +350,9 @@ a:focus{
         margin-left: 21vw;
     }
     #s123 {
-        width: 160%;
-        height:28vh;
-        border-radius:13px;
+        width: 120%;
+        height:25vh;
+        border-radius:16px;
         margin:3px;
         padding:1rem;
     }
