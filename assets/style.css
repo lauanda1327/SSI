@@ -129,6 +129,10 @@ main{
     background-image: var(--logo);
     background-position: center;
 }
+.logo:hover{
+    transition: .3s;
+    transform: rotate(360deg);
+}
 header a{
     display:flex;
     justify-content: center;
@@ -161,9 +165,7 @@ header a:hover{
 }
 
 
-.logo{
-    animation: animacao 6s infinite;
-}
+
 .pagvisivel{
     background-color: var(--primary);
 }
