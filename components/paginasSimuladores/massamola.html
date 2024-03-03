@@ -28,31 +28,29 @@
             <canvas width="500" height="800" id="canvas2"></canvas>
         </div>
         <div class="configuracao">
-            <div id="controle">
-                <div class="caixa2">
-                  <span>Linha:</span>
-                  <input type="number" id="tamCorda3" value="300" min="0" max="700" onfocus="this.value='';"/>
+                <div class="t1">
+                  <h6 class="sp">Linha:</h6>
+                  <input type="number" id="tamCorda3" value="300" min="0" max="700"/>
                 </div>
-                <div class="caixa2">
-                  <span>Variação:</span>
-                  <input type="number" id="angInicial3" value="20" min="1" max="89" onfocus="this.value='';"/>
+                <div class="t2">
+                  <h6 class="sp">Variação:</h6>
+                  <input type="number" id="angInicial3" value="20" min="1" max="89"/>
                 </div>
-                <div class="caixa2">
-              <span>Cor da parede:</span>
-              <input type="text" id="corfixo3" value="white"  onfocus="this.value='';"/>
+                <div class="t3">
+                  <h6 for="corfixo3">Cor:</h6>
+                  <input type="color" id="corfixo3" value="#000000"/>
+              </div>
+            <div class="t4">
+              
             </div>
-            <div class="caixa2">
-              <span>Cor da Linha:</span>
-              <input type="text" id="corLinha3" value="white"  onfocus="this.value='';"/>
+            <div class="t5">
+             
             </div>
-            <div class="caixa2">
-              <span>Cor do Objeto:</span>
-              <input type="text" id="corObj3" value="white"  onfocus="this.value='';"/>
+            <div class="t6">
+              
             </div>
-            
-              <button class="btn" onclick="desenharTela()">Aplicar</button>
-              <button class="btn" onclick="resetar()">Resetar</button>
-            </div>
+            <div class="t7"><button class="btn" onclick="desenharTela()">Aplicar</button></div>
+            <div class="t8"><button class="btn" onclick="resetar()">Resetar</button></div>
              <div class="controle2">
             <span>Velocidade:</span><br />
             <input type="radio" id="velocidade" name="velocidade" value="normal"/>
