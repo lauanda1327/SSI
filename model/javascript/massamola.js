@@ -3,18 +3,19 @@ const elementoPaiDoCanva = document.querySelector(".container");
 alturaPai = elementoPaiDoCanva.clientHeight
 larguraPai = elementoPaiDoCanva.clientWidth
 if(larguraPai < 600){
+    telaCanva.setAttribute("width",larguraPai);
     telaCanva.setAttribute("height",alturaPai / 1.8);
 }
       //cor padrão da linha, tela e pendulo(objeto)
-  let corPadrao = "#000000";
+  let corPadrao = "#000";
   let background = "#f5e1f1";
   // comprimento da corda3
   let corda3 = localStorage.getItem("corda3");
   // ângulo inicial
   let ang03 = localStorage.getItem("ang03");
   // Ponto onde a corda3 está presa
-  let xc = larguraPai/2;
-  let yc = 15;
+  let xc = 300;
+  let yc = 10;
   // coordenadas do pêndulo
   let x; 
   let y;
@@ -27,8 +28,6 @@ if(larguraPai < 600){
     let ctx;
     let larg, alt;
 let bancoDeDadosNaoExiste = localStorage.getItem("corda3") == null || localStorage.getItem("ang03") === null  ||
-        localStorage.getItem("corLinha3") === null ||
-        localStorage.getItem("corObj3") === null ||
         localStorage.getItem("corfixo3") === null ||
         localStorage.getItem("numpos3") === null
 
@@ -36,17 +35,14 @@ let bancoDeDadosNaoExiste = localStorage.getItem("corda3") == null || localStora
     if (bancoDeDadosNaoExiste) {
       //resete para os valores padrão
       localStorage.setItem("corda3", "300");
-      localStorage.setItem("corLinha3",corPadrao);
-      localStorage.setItem("corObj3",corPadrao);
       localStorage.setItem("ang03", "40");
       localStorage.setItem("numpos3", "30");
       localStorage.setItem("corfixo3",corPadrao);
+      init()
     }
     //atribuindo os valores definidos pelo usuario no value de cada input
     document.getElementById("tamCorda3").value = localStorage.getItem("corda3");
     document.getElementById("angInicial3").value = localStorage.getItem("ang03");
-    document.getElementById("corLinha3").value = localStorage.getItem("corLinha3");
-    document.getElementById("corObj3").value = localStorage.getItem("corObj3");
     document.getElementById("corfixo3").value = localStorage.getItem("corfixo3");
 
     function init() {
@@ -78,19 +74,16 @@ let bancoDeDadosNaoExiste = localStorage.getItem("corda3") == null || localStora
       ctx.fill()
 
       ctx.lineWidth = 3;
-      let corLinha3 = localStorage.getItem("corLinha3")
-      let corObj3 = localStorage.getItem("corObj3")
       let corfixo3 = localStorage.getItem("corfixo3")
-      desenharMolaETeto(xc, yc, x, y, corLinha3,corfixo3)
-      desenharObj(corObj3)
+      desenharMolaETeto(xc, yc, x, y, corfixo3,corfixo3)
+      desenharObj(corfixo3)
     }
 
     function desenharObj(cor) {
      // desenhar obj
       ctx.fillStyle = cor;
       ctx.strokeStyle = cor;
-      ctx.strokeRect(larguraPai/2 - 15, y, 35,35)
-      
+      ctx.strokeRect(300 - 15, y, 35,35)
       //ctx.strokeRect(x-15,y,30,30)
       //ctx.fillRect(x-15,y,30,30)
       //ctx.drawImage(img, 10, 10, 150, 180);
@@ -116,14 +109,10 @@ let bancoDeDadosNaoExiste = localStorage.getItem("corda3") == null || localStora
       //captura valor dos campos de input
       let tamanhoCorda = document.getElementById("tamCorda3");
       let anguloInicial = document.getElementById("angInicial3");
-      let corLinha3 = document.getElementById('corLinha3');
-      let corObj3 = document.getElementById("corObj3");
       let corfixo3 = document.getElementById('corfixo3');
       //jogar os valores no banco de dados
       localStorage.setItem("corda3", tamanhoCorda.value);
       localStorage.setItem("ang03", anguloInicial.value);
-      localStorage.setItem("corLinha3", corLinha3.value);
-      localStorage.setItem("corObj3", corObj3.value);
       localStorage.setItem("corfixo3", corfixo3.value);
       //recarregar a página para que as alterações do usuario sejam atualizadas
       window.location.reload();
@@ -131,8 +120,6 @@ let bancoDeDadosNaoExiste = localStorage.getItem("corda3") == null || localStora
     function resetar() {
       localStorage.setItem("corda3", "300");
       localStorage.setItem("ang03", "40");
-      localStorage.setItem("corLinha3", corPadrao);
-      localStorage.setItem("corObj3", corPadrao);
       localStorage.setItem("numpos3", "30");
       localStorage.setItem("corfixo3", corPadrao);
       //recarregar a página para que as alterações padrão sejam atualizadas

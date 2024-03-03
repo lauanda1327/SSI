@@ -10,6 +10,9 @@
     <title>SSI - Pêndulo</title>
 </head>
 <body onload="init()">
+    <article class="pop_up_pai">
+            <div class="pop_up_simuladores">ola</div>
+        </article>
     <header>
         <!-- Todo o código do header/nav aqui...por favor -->
         <img src="../../model/icons/logo.png" alt="logo do site" class="logo">
@@ -30,28 +33,35 @@
         </div>
         <div class="configuracao">
             <!-- Todo o código do main aqui...por favor -->
+                    
                     <div class="t1">
-                        <h6 class="sp">Comprimento:
-                        </h6>
-                        <input type="number" id="tamCorda" value="250" min="10" max="900" onchange="showVal2(this.value)">
+                        <mark class="nuvem1">
+                            <p>Comprimento<br>(200)</p>
+                        </mark>
+                        <h6 class="sp">Comprimento:</h6>
+                        <input type="number" id="tamCorda" value="250" min="10" max="900">
                     </div>
                     <div class="t2">
-                        <h6 class="ap">Ângulo Inicial:
-                        </h6>
-                        <input type="number" id="angInicial" value="20" min="1" max="89" onchange="showVal(this.value)">
+                        <mark class="nuvem2">
+                            <p>Angulo de Inicio<br>(20)</p>
+                        </mark>
+                        <h6 class="ap">Ângulo Inicial:</h6>
+                        <input type="number" id="angInicial" value="20" min="1" max="89">
                     </div>
                     <div class="t3">
                         <h6 for="corfixo">Cor:</h6>
                         <input type="color" id="corfixo" value="#000000"/>
                     </div>
-                    <div class="t4"></div>
+                    <div class="t4">
+                       
+                    </div>
                     <div class="t5"></div>
                     <div class="t6"></div>
                     <div class="t7">
                         <button class="btn" onclick="desenharTela()">Aplicar</button>
                     </div>
                     <div class="t8">
-                        <button class="btn" onclick="resetar()">Resetar</button>
+                        <button class="btn2" onclick="resetar()">Resetar</button>
                     </div>
                     
                    

@@ -28,39 +28,42 @@
             <canvas width="800" height="500" id="canvas"></canvas>
         </div>
         <div class="configuracao">
-            <div id="controle">
-                <div class="caixa2">
-                  <span>Linha:</span>
-                  <input type="number" id="tamCorda" value="300" min="0" max="1000" onfocus="this.value='';"/>
-                </div>
-                <div class="caixa2">
-                  <span>Variação:</span>
-                  <input type="number" id="angInicial" value="20" min="1" max="89" onfocus="this.value='';"/>
-                </div>
-                <div class="caixa2">
-              <span>Cor do teto:</span>
-              <input type="text" id="corfixo2" value="white"  onfocus="this.value='';"/>
-            </div>
-            <div class="caixa2">
-              <span>Cor da Linha:</span>
-              <input type="text" id="corLinha2" value="white"  onfocus="this.value='';"/>
-            </div>
-            <div class="caixa2">
-              <span>Cor do Objeto:</span>
-              <input type="text" id="corObj2" value="white"  onfocus="this.value='';"/>
-            </div>
+              <div class="t1">
+                <h6 class="sp">Comprimento:</h6>
+                <input type="number" id="tamCorda" value="300" min="0" max="1000"/>
+              </div>
+              <div class="t2">
+                <h6 class="ap">Variação:</h6>
+                <input type="number" id="angInicial" value="20" min="1" max="89"/>
+              </div>
+              <div class="t3">
+                <h6 for="corfixo2">Cor:</h6>
+                <input type="color" id="corfixo2" value="#000000"/>
+          </div>
+          <div class="t4">
             
-              <button class="btn" onclick="desenharTela()">Aplicar</button>
-              <button class="btn" onclick="resetar()">Resetar</button>
-            </div>
-             <div class="controle2">
-            <span>Velocidade:</span><br />
-            <input type="radio" id="velocidade" name="velocidade" value="normal"/>
-            <label for="normal">Normal</label><br />
-            <input type="radio" id="velocidade" name="velocidade" value="devagar" />
-            <label for="devagar">Devagar</label><br />
-            </div>
-        </div>
+          </div>
+          <div class="t5">
+            
+          </div>
+          <div class="t6">
+
+          </div>
+          <div class="t7">
+            <button class="btn" onclick="desenharTela()">Aplicar</button>
+          </div>
+          <div class="t8">
+            <button class="btn" onclick="resetar()">Resetar</button>
+          </div>
+
+           <div class="controle2">
+          <span>Velocidade:</span><br />
+          <input type="radio" id="velocidade" name="velocidade" value="normal"/>
+          <label for="normal">Normal</label><br />
+          <input type="radio" id="velocidade" name="velocidade" value="devagar" />
+          <label for="devagar">Devagar</label><br />
+          </div>
+      </div>
   </body>
   <script src="../../model/javascript/molaebloco.js"></script>
 </html>

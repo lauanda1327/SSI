@@ -29,6 +29,7 @@
     --logo:url("../model/icons/logo.png");
     --c: url("../model/icons/c.png");
 }
+
 .dark-mode{
     --text:#F2E1F9;
     --background2: #1F0A1B;
@@ -39,6 +40,7 @@
     --background: #19081d;
     --logo:url("../model/icons/logow.png");*/
 }
+
 body{
     background-color: var(--background);
     padding: 10px;
@@ -47,6 +49,22 @@ body{
     overflow-y: auto;
     position:relative;/*24/02*/
     z-index:2;
+}
+
+.pop_up{
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -50%); /* hummm */
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    padding: 1rem;
+    width: 22vw;
+    border-radius: 16px;
+    height: 26vw;
+    min-width: 200px;
+    min-height: 250px;
 }
 .latest {
     color:rgb(10, 1, 31);
@@ -95,16 +113,15 @@ main{
     width: 100%;
 }
 #theme_button{
+    border: inherit;
     cursor:pointer;
-    width:16px;
-    height:16px;
-    animation:dice infinite 12s;
-    position:absolute;
-    z-index: 1;
-    top:2vw;
-    right:3vw;
-    border:inherit;
-    background:transparent;
+    width:8vw;
+    border-radius:4px;
+    font-weight:300;
+    height:100%;
+    text-align:center;
+    cursor:pointer;
+    background: transparent;
 }
 @keyframes dice{
     0%{
@@ -164,8 +181,6 @@ header a:hover{
     background-position: center;
 }
 
-
-
 .pagvisivel{
     background-color: var(--primary);
 }
@@ -199,7 +214,7 @@ a:focus{
 }
 #s123{
     width: 22vw;
-    height: 14vw;
+    height: 14.2vw;
     border-radius: 1vw;
     cursor: pointer;
     display: flex;

@@ -8,8 +8,9 @@ if(larguraPai < 600){
     telaCanva.setAttribute("width",larguraPai);
     telaCanva.setAttribute("height",alturaPai / 1.8);
 }
+
 //cor padrão da linha, tela e pendulo(objeto)
-let corPadrao = "#000000";
+let corPadrao = "#000";
 let background = "#f5e1f1"
 // comprimento da corda
 let corda = localStorage.getItem("corda");
@@ -30,10 +31,11 @@ let incAng = Math.PI / numPos; // incremento angular (para angZ) de cada vez que
 let angZ = 0;
 let ctx;
 let larg, alt;
+
 let bancoDeDadosNaoExiste = localStorage.getItem("corda") == null ||
     localStorage.getItem("ang0") === null ||
     localStorage.getItem("corfixo") === null ||
-    localStorage.getItem("numpos") === null
+    localStorage.getItem("numpos") === null;
 
 
 if (bancoDeDadosNaoExiste) {
@@ -42,11 +44,13 @@ if (bancoDeDadosNaoExiste) {
     localStorage.setItem("ang0", "20");
     localStorage.setItem("numpos", "30");
     localStorage.setItem("corfixo", corPadrao);
+    
 }
 //atribuindo os valores definidos pelo usuario no value de cada input
 document.getElementById("tamCorda").value = localStorage.getItem("corda");
 document.getElementById("angInicial").value = localStorage.getItem("ang0");
 document.getElementById("corfixo").value = localStorage.getItem("corfixo");
+
 
 function init() {
     let c = document.getElementById("canvas");
@@ -127,6 +131,7 @@ function resetar() {
     //recarregar a página para que as alterações padrão sejam atualizadas
     window.location.reload();
 }
+
 //evento de escuta no teclado para ativar o botão enter e atualizar os dados
 window.addEventListener("keydown", (event) => {
     let tecla = event.key;
@@ -153,10 +158,4 @@ function showSelected(e) {
             desenharTela();
         }
     }
-}
-function showVal(newVal){
-    document.querySelector(".ap").innerHTML="Ângulo Inicial: " + newVal;
-}
-function showVal2(newVal){
-    document.querySelector(".sp").innerHTML="Tamanho da corda: " + newVal;
 }
