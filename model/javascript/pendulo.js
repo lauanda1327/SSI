@@ -116,13 +116,27 @@ function desenharTela() {
     let tamanhoCorda = document.getElementById("tamCorda");
     let anguloInicial = document.getElementById("angInicial");
     let corfixo = document.getElementById('corfixo');
-    //jogar os valores no banco de dados
-    localStorage.setItem("corda", tamanhoCorda.value);
-    localStorage.setItem("ang0", anguloInicial.value);
-    localStorage.setItem("corfixo", corfixo.value);
+
     //recarregar a página para que as alterações do usuario sejam atualizadas
-    window.location.reload();
+    if(tamanhoCorda.value != "" && tamanhoCorda.value >= 0 && tamanhoCorda.value <= 1000){
+        //jogar os valores no banco de dados
+        if(anguloInicial.value != "" && anguloInicial.value >= 0 && anguloInicial.value <= 90){
+            //jogar os valores no banco de dados
+            localStorage.setItem("corda", tamanhoCorda.value);
+            localStorage.setItem("ang0", anguloInicial.value);
+            localStorage.setItem("corfixo", corfixo.value);
+            window.location.reload();
+        }
+        else{
+             alert("informe os valores certos em todos os campos do angulo entre 0 e 90,não deixe espaçõs e nem vazio")
+        }
+    }
+    else{
+        alert("informe os valores certos em todos os campos da corda entre 0 e 1000,não deixe espaçõs e nem vazio")
+    }
+ 
 }
+
 function resetar() {
     localStorage.setItem("corda", "300");
     localStorage.setItem("ang0", "20");

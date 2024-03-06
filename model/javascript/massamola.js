@@ -110,12 +110,25 @@ let bancoDeDadosNaoExiste = localStorage.getItem("corda3") == null || localStora
       let tamanhoCorda = document.getElementById("tamCorda3");
       let anguloInicial = document.getElementById("angInicial3");
       let corfixo3 = document.getElementById('corfixo3');
-      //jogar os valores no banco de dados
-      localStorage.setItem("corda3", tamanhoCorda.value);
-      localStorage.setItem("ang03", anguloInicial.value);
-      localStorage.setItem("corfixo3", corfixo3.value);
       //recarregar a página para que as alterações do usuario sejam atualizadas
       window.location.reload();
+        //recarregar a página para que as alterações do usuario sejam atualizadas
+    if(tamanhoCorda.value != "" && tamanhoCorda.value >= 0 && tamanhoCorda.value <= 1000){
+        //jogar os valores no banco de dados
+        if(anguloInicial.value != "" && anguloInicial.value >= 0 && anguloInicial.value <= 90){
+            //jogar os valores no banco de dados
+            localStorage.setItem("corda3", tamanhoCorda.value);
+            localStorage.setItem("ang03", anguloInicial.value);
+            localStorage.setItem("corfixo3", corfixo3.value);
+            window.location.reload();
+        }
+        else{
+             alert("informe os valores certos em todos os campos do angulo entre 0 e 90,não deixe espaçõs e nem vazio")
+        }
+    }
+    else{
+        alert("informe os valores certos em todos os campos da corda entre 0 e 1000,não deixe espaçõs e nem vazio")
+    }
     }
     function resetar() {
       localStorage.setItem("corda3", "300");

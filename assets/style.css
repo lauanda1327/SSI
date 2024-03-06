@@ -193,7 +193,7 @@ header a:hover{
 }
 /*main -> principal*/
 .titulo{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-family: "Poppins",sans-serif;
     font-weight:300;
     margin-left: 0.4vw;
@@ -266,7 +266,7 @@ a:focus{
     opacity: 0.8;
 }
 .text h1{
-    font-size: 1.25rem;
+    font-size: 1.33rem;
     font-weight: 300;
 }
 .text p{
