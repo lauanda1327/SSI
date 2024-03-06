@@ -1,5 +1,4 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Diplomata+SC&family=K2D:wght@100;200;300&family=Open+Sans:wght@600&family=Poppins&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Diplomata+SC&family=K2D:wght@100;200;300&family=Open+Sans:wght@600&family=Poppins&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300&display=swap');
 /* reset */
 *{
     margin:0;
@@ -366,7 +365,7 @@ a:focus{
     }
     #s123 {
         width: 120%;
-        height:25vh;
+        height: 28vh;
         border-radius:16px;
         margin:3px;
         padding:1rem;
