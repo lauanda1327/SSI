@@ -25,20 +25,71 @@ main{
     justify-content: center;
     position:relative;
 }
-.linha1{
-    width:100%;
-    border:2px solid var(--background);
-    position:absolute;
-    left:0;
+.blocoDeInformacao {
+    overflow-y: auto;
+    font-family: "Poppins";
+    cursor: default;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    top: 44%;
+    left: 50%;
+    background-color: var(--blc);
+    padding: 0.8rem 1.8rem;
+    width: 30vw;
+    border-radius: 34px;
+    border: 1px solid #cecdcf;
+    height: 79vh;
+    min-width: 250px;
+    min-height: 100px;
 }
-.linha2{
-    height:100%;
-    border:2px solid var(--background);
-    position:absolute;
-    left:50%;
+.sol button{
+    border:inherit;
+   border-radius:50%;
+   width:100%;
+   height:100%;
+   background:transparent;
+}
+.blocoDeInformacao h2{
+    margin: 0 auto;
+    font-size: calc(1rem * 1.155);
+}
+.blocoDeInformacao p{
+    font-size: calc(1rem * 0.89);
+}
+/* .imagem_info{
+    
+} */
+.solInfo{
+    font-family: "Poppins";
+    font-size: calc(1rem *0.8);
+    position: relative;
+    top: -30px;
+    left: 35%;
+    display: none;
+    color: var(--text);
+    font-weight: 300;
+    background-color: transparent;
+}
+.mercurioInfo,.venusInfo,.mercurioInfo,.terraInfo,.marteInfo,.jupiterInfo,.saturnoInfo,.uranoInfo,.netunoInfo{
+    position: relative;
+    font-family: "Poppins";
+    font-size: calc(1rem *0.8);
+    top: -18px;
+    justify-content: center;
+    display: none; 
+    font-weight: 300;
+    color: var(--text);
+    background-color: transparent;
 }
 .pop_up_simuladores{
+    cursor: default;
     display: none;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     transform: translate(-50%, -50%); /* hummm */
     z-index: 1;
@@ -51,6 +102,22 @@ main{
     height: 2vw;
     min-width: 250px;
     min-height: 100px;
+}
+.pop_up_simuladores p{
+    font-family: "Poppins";
+    font-size: calc(1rem / 1.35);
+}
+.simuok{
+    font-family: "Poppins";
+    color: whitesmoke;
+    position: absolute;
+    bottom:12px;
+    right: 12px;
+    padding: 0.3rem 1.5rem;
+    border:inherit;
+    border-radius: 8px;
+    background-color: #00bcd4;
+    cursor: pointer;
 }
 #canvas2{  
     transform: rotate(-90deg);
@@ -90,7 +157,7 @@ label{
     display:flex;
     justify-content: space-between;
     backdrop-filter: blur(50px);
-    width:65%;
+    width:fit-content;
     border-radius:6px;
     height:10vh;
     position:fixed;
@@ -132,7 +199,24 @@ label{
     background: #ffc535;
 }
 .t6{
-    background: #cecdcf;
+    display:flex;
+    justify-content:center;
+}
+.t6 button,.t5 button,.t4 a{
+    background-color: transparent;
+    border: inherit;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.t6 button img, .t5 button img{
+    width: 2vw;
+}
+.t4 a img{
+    width: 2vw;
 }
 .t7{
     overflow:hidden;
@@ -172,7 +256,19 @@ label{
     opacity:0.5;
     cursor:default;
     text-align:center;
-    /* font-size: calc(16px * 0.5); */
+    font-size: calc(16px * 0.5);
+}
+.t7{
+    display:flex;
+    justify-content: center;
+}
+.np{
+    position:absolute;
+    z-index:1;
+    color:black;
+    opacity:0.8;
+    cursor:default;
+    font-size: calc(16px * 0.5);
 }
 .btn:active,.btn2:active{
     transform: scale(0.90);
@@ -185,7 +281,7 @@ label{
 #corfixo{
     border-radius:4px;
 }
-.nuvem1, .nuvem2{
+.nuvem1, .nuvem2, .nuvem4, .nuvem5{
     transition:.3s;
     display: none;
     position:absolute;
@@ -209,10 +305,21 @@ label{
 .t2:hover .nuvem2{
     display: flex;
 }
-.nuvem1 p, .nuvem2 p{
+.t4:hover .nuvem4{
+    display: flex;
+}
+.t5:hover .nuvem5{
+    display:flex;
+}
+
+.nuvem1 p, .nuvem2 p, .nuvem4 p, .nuvem5 p{
     font-size: calc(18px * 0.55);
     font-family: "Poppins",sans-serif;
-    color:f9fbff;
+    color:#f9fbff;
+}
+.nuvem4 p{
+    font-size: calc(21px * 0.55);
+    margin: 5px;
 }
 .t1 input{
     cursor:pointer;
@@ -262,6 +369,9 @@ header a:hover{
     display:flex;
     align-content:center;
     justify-content: center;
+}
+.container_do_sistema_solar button{
+    cursor:pointer;
 }
 .sol{
     width:100px;
@@ -457,7 +567,7 @@ span{
     margin:15px;
 }
 /*media querie for computers*/
-@media only screen and (max-width:900px) {
+@media only screen and (max-width:900px) and (min-width:600px) {
     /*computers*/
     #s123 {
       max-width: 450px;
@@ -479,38 +589,39 @@ span{
         width: 3vw;
         height: 3vw;
     }
+    
   }
   
 @keyframes translacaom2{
     0%{
-        transform: rotate(0deg) translate(40.8px) rotate(0deg);
+        transform: rotate(0deg) translate(56.8px) rotate(0deg);
     }
     100%{
-        transform: rotate(360deg) translate(40.8px) rotate(360deg);
+        transform: rotate(360deg) translate(56.8px) rotate(360deg);
     }
 }
 @keyframes translacaov2{
-    0%{
-        transform: rotate(0deg) translate(45px) rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg) translate(45px) rotate(360deg);
-    }
-}
-@keyframes translacaot2{
-    0%{
-        transform: rotate(0deg) translate(60px) rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg) translate(60px) rotate(360deg);
-    }
-}
-@keyframes translacaomar2{
     0%{
         transform: rotate(0deg) translate(70px) rotate(0deg);
     }
     100%{
         transform: rotate(360deg) translate(70px) rotate(360deg);
+    }
+}
+@keyframes translacaot2{
+    0%{
+        transform: rotate(0deg) translate(90px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(90px) rotate(360deg);
+    }
+}
+@keyframes translacaomar2{
+    0%{
+        transform: rotate(0deg) translate(100px) rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg) translate(100px) rotate(360deg);
     }
 }
 @keyframes translacaoj2{
@@ -569,29 +680,29 @@ span{
         margin-bottom: 2px;
     }
     .sol{
-        width:60px;
-        height:60px;
+        width:90px;
+        height:90px;
     }
     .mercurio{
-        margin-top:30px;
-        width:6px;
-        height:6px;
+        margin-top: 40px;
+        width:7px;
+        height:7px;
         animation: translacaom2 infinite linear 6.3s;
     }
     .venus{
-        margin-top:22px;
+        margin-top:40px;
         width:10px;
         height:10px;
         animation: translacaov2 infinite linear 18.26s;
     }
      .terra{
-        margin-top:21px;
+        margin-top:37px;
         width:9px;
         height:9px;
         animation: translacaot2 infinite linear 26.13s;
      }
     .marte{
-        margin-top:20px;
+        margin-top:30px;
         width:8px;
         height:8px;  
         animation: translacaomar2 infinite linear 49.1s;

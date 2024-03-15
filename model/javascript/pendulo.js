@@ -1,5 +1,7 @@
 const telaCanva = document.querySelector("#canvas");
 const elementoPaiDoCanva = document.querySelector(".container");
+let nuvem_simuladores = document.querySelector(".pop_up_simuladores")
+usuario_visitou_pela_primeira_vez_o_simulador =  localStorage.getItem("visitouSimulador") === null
 alturaPai = elementoPaiDoCanva.clientHeight
 larguraPai = elementoPaiDoCanva.clientWidth
 telaCanva.setAttribute("width",larguraPai);
@@ -7,6 +9,36 @@ telaCanva.setAttribute("height",alturaPai/1.1);
 if(larguraPai < 600){
     telaCanva.setAttribute("width",larguraPai);
     telaCanva.setAttribute("height",alturaPai / 1.8);
+}
+
+if (usuario_visitou_pela_primeira_vez_o_simulador) {
+    //mostre a pop_up de acesso
+    nuvem_simuladores.style.display = 'flex'
+    localStorage.setItem("visitouSimulador", "true")
+}
+//pup_up simuladores
+function fechar_nuvem_simulador(){
+    nuvem_simuladores.style.display = 'none'
+}
+
+let clicks = 0;
+
+function informacoes(){/*==*/
+    let bi = document.querySelector(".blocoDeInformacao")
+    clicks += 1
+    if(clicks == 0){
+        bi.style.display = 'none'
+    }
+
+    if(clicks == 1){
+        bi.style.display = 'flex'
+    }
+
+    if(clicks == 2){
+        bi.style.display = 'none'
+        clicks = 0
+    }
+    
 }
 
 //cor padrão da linha, tela e pendulo(objeto)
@@ -109,6 +141,7 @@ function desenharLinha(x1, y1, x2, y2, cor) {
     ctx.fillStyle = cor;
     ctx.fillRect(xc - 90, yc - 5, 180, 8);
     ctx.fillRect(xc - 20, yc, 40, 9);
+
 }
 
 function desenharTela() {
@@ -160,16 +193,3 @@ for (const radioButton of radioButtons) {
     radioButton.addEventListener('change', showSelected);
 }
 
-function showSelected(e) {
-    if (this.checked) {
-        let a = this.value
-        if (a == "normal") {
-            localStorage.setItem("numpos", "30");
-            desenharTela();
-        }
-        if (a == "devagar") {
-            localStorage.setItem("numpos", "60");
-            desenharTela();
-        }
-    }
-}

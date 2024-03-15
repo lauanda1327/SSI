@@ -10,13 +10,27 @@
     <title>SSI - Sistema Solar</title>
 </head>
 <body>
+    <section class="blocoDeInformacao">
+        <h2>Física</h2>
+        <br>
+        <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="imagem_info">
+            
+        </div>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ."</p>
+
+        <h2>Matemática</h2>
+        <br>
+        <code></code>
+        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    </section>
     <header>
         <!-- Todo o código do header/nav aqui...por favor -->
         <div class="logo"><div></div></div>
         <div class="caixa">
-            <a href="../../index.html"><img src="../../model/icons/a.png" class="a"></a>
-            <a href="../calculadora.html"><img src="../../model/icons/b.png" class="b"></a>
-            <a href="../informacoes.html"><img src="../../model/icons/c.png" class="c"></a>
+            <a href="../../index.html" class="a1"><img src="../../model/icons/a.png" class="a"></a>
+            <a href="../calculadora.html" class="a2"><img src="../../model/icons/b.png" class="b"></a>
+            <a href="../informacoes.html" class="a3"><img src="../../model/icons/c.png" class="c"></a>
         </div>
         <div class="adicional">
             <a href="#" class="info"><img src="../../model/icons/d.png" alt="link 4" class="d"></a>
@@ -24,17 +38,17 @@
     </header>
     <main>
         <div class="container_do_sistema_solar">
-            <div class="sol"></div>
-            <div class="mercurio"></div>
-            <div class="venus"></div>
-            <div class="terra"></div>
-            <div class="marte"></div>
-            <div class="jupiter"></div>
+            <div class="sol"><button onclick="sol()"><mark class="solInfo"><p>Sol</p></mark></button></div>
+            <div class="mercurio"><mark class="mercurioInfo"><p>Mercurio</p></mark></div>
+            <div class="venus"><mark class="venusInfo"><p>Vênus</p></mark></div>
+            <div class="terra"><mark class="terraInfo"><p>Terra</p></mark></div>
+            <div class="marte"><mark class="marteInfo"><p>Marte</p></mark></div>
+            <div class="jupiter"><mark class="jupiterInfo"><p>Jupiter</p></mark></div>
             <div class="anel_de_saturno">
-                <div class="saturno"></div>
+                <div class="saturno"><mark class="saturnoInfo"><p>Saturno</p></mark></div>
             </div>
-            <div class="urano"></div>
-            <div class="netuno"></div>
+            <div class="urano"><mark class="uranoInfo"><p>Urano</p></mark></div>
+            <div class="netuno"><mark class="netunoInfo"><p>Netuno</p></mark></div>
         </div>
         <!-- Todo o código do main aqui...por favor -->
         <!-- <div class="configuracao"> -->
@@ -44,34 +58,51 @@
         <div class="configuracao">
             <!-- Todo o código do main aqui...por favor -->
                     
-                    <div class="t1">
+                    <!-- <div class="t1">
                         <mark class="nuvem1">
-                            <p>Comprimento<br>(200)</p>
+                            <p>Planetas totais: <br>(7)</p>
                         </mark>
-                        <h6 class="sp">Comprimento:</h6>
-                        <input type="number" id="tamCorda" value="250" min="10" max="900">
+                        <h6 class="sp">Planetas</h6>
+                        
                     </div>
                     <div class="t2">
                         <mark class="nuvem2">
-                            <p>Angulo de Inicio<br>(20)</p>
+                            <p>Tempo em dias: <br>(365)</p>
                         </mark>
-                        <h6 class="ap">Ângulo Inicial:</h6>
-                        <input type="number" id="angInicial" value="20" min="1" max="89">
-                    </div>
+                        <h6 class="ap">Todo o tempo é baseado e</h6>
+                        
+                    </div> -->
                     <div class="t3">
-                        <button id="theme_button" onclick="button()"><img src="../../model/icons/paint.png"></button>
+                        <button id="theme_button" onclick="button()">
+                            <img src="../../model/icons/paint.png">
+                        </button>
                     </div>
-                    <div class="t4">
-                       
+                    
+                    <div class="t5" style="background: #ff6a75">
+                        
+                        <button onclick="mostrarnomeplaneta()">
+                            <img src="../../model/icons/planet.png">
+                        </button>
                     </div>
-                    <div class="t5"></div>
-                    <div class="t6"></div>
+                    <div class="t6" style="background: #f1f1f1b9">
+                        <button onclick="informacoes()">
+                            <img src="../../model/icons/info.png">
+                        </button>
+                    </div>
+                    <div class="t4" style="background: #ffc535">
+                        <mark class="nuvem4">
+                            <p>Atualizações</p>
+                        </mark>
+                        <a href="../readme.html">
+                            <img src="../../model/icons/sino.png">
+                        </a>
+                    </div>
                     <div class="t7">
-                        <button class="btn" onclick="desenharTela()">Aplicar</button>
+                        <h6 class="np">Sistema Solar<br>V 2.6</h6>
                     </div>
-                    <div class="t8">
-                        <button class="btn2" onclick="resetar()">Resetar</button>
-                    </div>
+                    <!-- <div class="t8">
+                        
+                    </div> -->
                     
                    
             <!-- <div class="controle2">
@@ -88,5 +119,5 @@
         </div>
     </main>
 </body>
-<script src="../../script.js"></script>
+<script src="../../model/javascript/sistemasolar.js"></script>
 </html>
