@@ -1,10 +1,41 @@
 const telaCanva = document.querySelector("#canvas");
 const elementoPaiDoCanva = document.querySelector(".container");
+let nuvem_simuladores = document.querySelector(".pop_up_simuladores")/*==*/
+usuario_visitou_pela_primeira_vez_o_simulador =  localStorage.getItem("visitouSimulador") === null/*==*/
 alturaPai = elementoPaiDoCanva.clientHeight
 larguraPai = elementoPaiDoCanva.clientWidth
 if(larguraPai < 600){
     telaCanva.setAttribute("width",larguraPai);
     telaCanva.setAttribute("height",alturaPai / 1.8);
+}
+
+if (usuario_visitou_pela_primeira_vez_o_simulador) {/*==*/
+    //mostre a pop_up de acesso
+    nuvem_simuladores.style.display = 'flex'
+    localStorage.setItem("visitouSimulador", "true")
+}
+//pup_up simuladores
+function fechar_nuvem_simulador(){/*==*/
+    nuvem_simuladores.style.display = 'none'
+}
+let clicks = 0;
+
+function informacoes(){/*==*/
+    let bi = document.querySelector(".blocoDeInformacao")
+    clicks += 1
+    if(clicks == 0){
+        bi.style.display = 'none'
+    }
+
+    if(clicks == 1){
+        bi.style.display = 'flex'
+    }
+
+    if(clicks == 2){
+        bi.style.display = 'none'
+        clicks = 0
+    }
+    
 }
 
 //cor padrão da linha, tela e pendulo(objeto)

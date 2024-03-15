@@ -16,7 +16,6 @@
 }*/
 
 :root{
-
     --accent2: #9F2850;
     --text: #16061d;
     --background2: #F5E1F1;
@@ -27,17 +26,20 @@
     --background: #FAF7FD;  
     --logo:url("../model/icons/logo.png");
     --c: url("../model/icons/c.png");
+    --blc: #faf7fd;
 }
 
 .dark-mode{
     --text:#F2E1F9;
-    --background2: #1F0A1B;
-    /*--primary: #863DCF;
+    --background2: #120a18;
+    --background3: #120a18;
+    --primary: #863DCF;
     --secondary: #761E53;
     --accent: #9F2850;
     --accent2: #e8454f;
-    --background: #19081d;
-    --logo:url("../model/icons/logow.png");*/
+    --background: #0a0211;
+    --logo: url("../model/icons/logowhite.png");
+    --blc: #cecdcf;  
 }
 
 body{
@@ -48,11 +50,22 @@ body{
     overflow-y: auto;
     position:relative;/*24/02*/
     z-index:2;
-}
-
-.pop_up{
-    display: none;
+}/*
+.pop_up_pai{
+    z-index: 1;
     position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff69;
+}*/
+.pop_up{
+    cursor: default;
+    font-family: "Poppins";
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    justify-content: space-around;  
     transform: translate(-50%, -50%); /* hummm */
     z-index: 1;
     top: 50%;
@@ -64,6 +77,42 @@ body{
     height: 26vw;
     min-width: 200px;
     min-height: 250px;
+}
+.pop_up p{
+    font-size: calc(1rem / 1.48);
+    text-align: center;
+}
+.caixa_nuvem{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.caixa_nuvem button{
+    border:inherit;
+    padding: 0.3rem 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+	background:transparent;
+}
+.pop_up .slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    border-radius: 12px;
+    background-color: var(--background2);
+}
+.pop_up .slide img{
+    width:60%;
+}
+.vamosla{
+    font-family: "Poppins";
+    color: black;
+}
+.agoranao{
+    font-family: "Poppins";
+    color: red;
 }
 .latest {
     color:rgb(10, 1, 31);
@@ -174,10 +223,8 @@ header a:hover{
 .a,.b,.c,.d{
     width:1.2vw;
     height:1.2vw;
-}
-.c{
-    background-image: var(--c);
-    background-position: center;
+    max-width: 1.2rem;
+    max-height: 1.2rem;
 }
 
 .pagvisivel{
@@ -257,6 +304,10 @@ a:focus{
     transition: .3s;
     transform: rotate(10deg);
 }
+#s123:hover .image2 img{
+    transition: .3s;
+    transform: rotate(10deg);
+}
 .text{
     text-align: start;
     padding-left: 0.7rem;
@@ -325,6 +376,10 @@ a:focus{
     .container{
         min-height: 100vh;
         overflow: auto;
+    }
+    
+    header{
+        height: 121vh;
     }
   }
   /*media queries for mobile*/

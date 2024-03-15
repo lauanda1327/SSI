@@ -9,6 +9,26 @@
     <title>SSI - Mola e um bloco</title>
   </head>
   <body onload="init();">
+    <section class="blocoDeInformacao">
+        <h2>Física</h2>
+        <br>
+        <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="imagem_info">
+            
+        </div>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ."</p>
+
+        <h2>Matemática</h2>
+        <br>
+        <code></code>
+        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    </section>
+    <article class="pop_up_pai">
+            <div class="pop_up_simuladores">
+              <p>Olá, visitante. Para dar início a visualização do simulador aperte o botão "aplicar" ou pressione (Enter), caso esteja no computador</p>
+                <button onclick="fechar_nuvem_simulador()" class="simuok">OK</button>
+            </div>
+    </article>
     <header>
         <!-- Todo o código do header/nav aqui...por favor -->
         <img src="../../model/icons/logo.png" alt="logo do site" class="logo">
@@ -41,13 +61,18 @@
                 <input type="color" id="corfixo2" value="#000000"/>
           </div>
           <div class="t4">
-            
+            <mark class="nuvem4">
+              <p>Atualizações</p>
+          </mark>
+            <a href="../readme.html">
+              <img src="../../model/icons/sino.png">
+          </a>
           </div>
+          
           <div class="t5">
-            
-          </div>
-          <div class="t6">
-
+            <button onclick="informacoes()">
+                <img src="../../model/icons/info.png">
+            </button>
           </div>
           <div class="t7">
             <button class="btn" onclick="desenharTela()">Aplicar</button>
@@ -55,14 +80,17 @@
           <div class="t8">
             <button class="btn" onclick="resetar()">Resetar</button>
           </div>
+          <div class="t6">
+            <h6 class="np">Mola e Bloco<br>V 3.6</h6>
+          </div>
 
-           <div class="controle2">
+           <!-- <div class="controle2">
           <span>Velocidade:</span><br />
           <input type="radio" id="velocidade" name="velocidade" value="normal"/>
           <label for="normal">Normal</label><br />
           <input type="radio" id="velocidade" name="velocidade" value="devagar" />
           <label for="devagar">Devagar</label><br />
-          </div>
+          </div> -->
       </div>
   </body>
   <script src="../../model/javascript/molaebloco.js"></script>
