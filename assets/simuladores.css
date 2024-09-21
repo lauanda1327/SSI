@@ -25,8 +25,38 @@ main{
     justify-content: center;
     position:relative;
 }
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 6px;
+  }
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+.blocoDeInformacao::-webkit-scrollbar {
+  width: 12px;
+}
+
+.blocoDeInformacao::-webkit-scrollbar-track {
+  background: #faf7fd;
+  margin:25px;
+}
+
+.blocoDeInformacao::-webkit-scrollbar-thumb {
+  background-color: rgb(85, 255, 0);
+  border-radius: 20px;
+  border: 3px solid #faf7fd;
+}
+
 .blocoDeInformacao {
-    overflow-y: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
     font-family: "Poppins";
     cursor: default;
     display: none;
@@ -39,7 +69,7 @@ main{
     left: 50%;
     background-color: var(--blc);
     padding: 0.8rem 1.8rem;
-    width: 30vw;
+    width: 35vw;
     border-radius: 34px;
     border: 1px solid #cecdcf;
     height: 79vh;
@@ -153,6 +183,7 @@ label{
     justify-content: center;
     overflow: hidden;
 }
+
 .configuracao{
     display:flex;
     justify-content: space-between;
@@ -658,6 +689,28 @@ span{
 }
   /*media queries for mobile*/
  @media only screen and (max-width:600px) {
+    #config{
+        bottom: 36px;
+        margin: 22px;
+       
+    }
+    .blocoDeInformacao{
+        width:80vw;
+        height: 50vh;
+    }
+    canvas{
+        overflow-x: hidden;
+    }
+    .configuracao div{
+        width: 21vw;
+        border-radius: 6px;
+    }
+    .configuracao{
+        background-color: inherit;
+        margin: 12px;
+        flex-wrap: wrap;
+        bottom: 86px;
+    }
     #s123 {
         width: 160%;
         height:22vh;

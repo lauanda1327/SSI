@@ -384,6 +384,10 @@ a:focus{
   }
   /*media queries for mobile*/
  @media only screen and (max-width:600px) {
+    .pop_up {
+        min-width: 345px;
+        min-height: 510px;
+    }
     body{
         flex-direction:column;
         padding:12px;
