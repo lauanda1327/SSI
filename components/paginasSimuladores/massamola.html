@@ -10,18 +10,135 @@
   </head>
   <body onload="init();">
     <section class="blocoDeInformacao">
-        <h2>Física</h2>
+        <!-- secao de informação -->
         <br>
-        <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div class="imagem_info">
-            
-        </div>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ."</p>
+        <h1 style="text-align:center;">Introdução ao Bloco Com Mola</h1>
+        <br>
+        <p> Esse simulador de Bloco E Mola é um ótimo exemplo de Movimento Harmônico Simples (MHS), infelizmente é difícil programar a animação de uma mola então no lugar foi adicionado uma simples linha, espero que você não se incomode e que consiga aprender da mesma forma que no simulador de Pêndulo Simples. <br><br>Dito isso, não se preocupe, se você é uma pessoa que não entende nada do assunto de MHS eu irei de explicar o básico do básico nas seções a seguir. <br><br>Caso não tenha percebido, as informações aqui são quase identicas as contidas no simulador de Pêndulo. Fique a vontade para comparar.</p>
+    
+        <br>
+        <h3>Conceito de Movimento</h3>
+        <br>
+        <p> Para entender o movimento de uma Mola presa a um Bloco, assim como em um pêndulo, é necessario entendermos o conceito de movimento e os fundamentos do Movimento Harmônico Simples (MHS).</p>
+        
+        <br>
+        <p>O movimento é introduzido nas primeiras aulas de cinématica. Podemos defini-lo a mudança de posição de um objeto em relação a um referencial ao longo do tempo. É importante notar que o movimento depende de um referencial de comparação. No caso do MHS, esse referencial é o ponto de equilíbrio da situação, como mostrado na imagem a seguir.
+        </p>
 
-        <h2>Matemática</h2>
         <br>
-        <code></code>
-        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <img style="width:100%;"src="./img/mola.png">
+        <br>
+        <p>Para um Pêndulo:</p>
+        <br>
+        <img style="width:100%;"src="./img/equilibrio.jpg">
+
+        <br>
+        <p> Essa mudança da posição do objeto pode ser descrita por meio de fórmulas que incluem variáveis fundamentais como a distância, a velocidade e a aceleração. O movimento pode ser classificado em várias categorias para o estudo da cinemática, como:</p>
+
+        <br>
+        <p><strong>• MRU</strong> (Movimento Retilíneo Uniforme): Movimento em linha reta com velocidade constante.</p>
+        <p><strong>• MRUV</strong> (Movimento Retilíneo Uniformemente Variado): Movimento em linha reta com aceleração constante.</p>
+        <p><strong>• MCU</strong> (Movimento Circular Uniforme): Movimento em círculo com velocidade constante.</p>
+
+        <br>
+        <h3>MHS (Movimento Harmônico Simples)</h3>
+
+        <br>
+        <p> O movimento harmônico simples (MHS) é um movimento periódico que acontece exclusivamente em sistemas conservativos</p>
+        <br>
+        <p>O MHS pode ser transformado em um círculo. A analogia ajuda bastante no entendimento do movimento. Observe a imagem a seguir:
+        </p>
+        <br>
+        <img style="width:100%;"src="./img/circulo.png">
+        
+        <br>
+        <p>
+                Uma informação legal de ter com você é de que no MHS não há ação de forças dissipativas, somente no MHC (Movimento Harmônico Complexo), um assunto estremamente mais elaborado (Sinônimo para Complicado) que não é apresentado no Ensino Médio.
+        </p>
+
+        <br>
+        <p> É extremamente importante entender que no movimento harmônico simples existe a ação de uma força restauradora que atua sobre o corpo de modo a fazê-lo voltar sempre para sua posição de equilíbrio. Veja a seguir:</p>
+
+        <br>
+        <img style="width:100%;"src="./img/rest.gif">
+
+        <br>
+        <img style="width:100%;"src="./img/rest2.png">
+
+        <br>
+        <h2>Aplicações do Simulador</h2> 
+
+        <br>
+        <p> No simulador de Mola e Bloco é possivel notar as variaveis que influenciam o movimento do Bloco em relação a Mola(Movimento Simples é aquele que <strong>não</strong> possui a ação de forças dissipativas, permitindo que o movimento teoricamente ocorra para sempre, guarde essa Informação/p>
+
+        <br>
+        <h3>Fórmulas</h3>
+
+        <br>
+        <p> Fórmulas!! 😊 Nada melhor do que fórmulas para alegrar a vida do estudante de física, não é?</p>
+        
+        <br>
+
+        <p><strong>Fórmula da Elongação</strong></p>
+        <br>
+        <p style="font-size:0.8rem;"><strong>Anote aí: </strong>Elongação é a medida da distância que um objeto se desvia do seu ponto de equilíbrio, em linguagemm simples serve para calcular a posição na qual o objeto esta no sistema</p>
+        <br>
+        <code>x(t)=A⋅cos(ωt+ϕ0)</code>
+        <br>
+        <p>• x(t) é a posição em função do tempo.</p>
+        <p>• A é a amplitude, a máxima distância do ponto de equilíbrio.</p>
+        <p>• ω é a frequência angular (rad/s), que indica a velocidade de oscilação.</p>
+        <p>• t é o tempo</p>
+        <p>• ϕ0 é a fase inicial, que determina a posição inicial do objeto.</p>
+        
+        <br>
+        <p><strong>Fórmula da Velocidade</strong></p>
+        <br>
+        <code>v(t)=−A⋅ω⋅sin(ωt+ϕ0)</code>
+        <br>
+        <p>• v(t) é a velocidade em função do tempo.</p>
+        <p>• A é a amplitude</p>
+        <p>• ω é a frequência angular em radiano por segundo</p>
+        <p>• t é o tempo</p>
+        <p>• ϕ0 é a posição inicial</p>
+
+        <br>
+        <p><strong>Fórmula da Aceleração</strong></p>
+        <br>
+        <code>v(t)=−A⋅ω²⋅cos(ωt+ϕ0)</code>
+        <br>
+        <p>• v(t) é a velocidade em função do tempo.</p>
+        <p>• A é a amplitude</p>
+        <p>• ω é a frequência angular em radiano por segundo</p>
+        <p>• t é o tempo</p>
+        <p>• ϕ0 é a posição inicial</p>
+
+        <br>
+        <p><strong>Fórmula da Pulsação</strong></p>
+        <br>
+        <code>ω = 2π/T</code>
+        <br>
+        <p>• ω é a frequência angular em radiano por segundo que será encontrada</p>
+        <p>• ϕ0 é a posição inicial</p>
+        <br>
+        <p>
+            Bom, essas são as principais fórmulas, no último site das referências você encontra todas as fórmulas do MHS, claro, não é necessário decorar todas elas, mas sim, entender como funcionam...
+        </p>
+        <br>
+        <h4>Você pode consultar tudo o que foi escrito aqui pelos seguintes links:</h4>
+        <br>
+        <a target="_blank" href="https://educador.brasilescola.uol.com.br/estrategias-ensino/movimento.htm" style="font-size:0.7rem">https://educador.brasilescola.uol.com.br/estrategias-ensino/movimento.htm<span style="font-size:0.7rem;color:rgb(98, 0, 255);"> - Acesso em 19/09/2024</span></a>
+        <br>
+        <a target="_blank" href="https://brasilescola.uol.com.br/fisica/movimento-harmonico-simples.htm#:~:text=O%20movimento%20harm%C3%B4nico%20simples%20(MHS,a%20uma%20posi%C3%A7%C3%A3o%20de%20equil%C3%ADbrio." style="font-size:0.7rem">HELERBROCK, Rafael. "Movimento harmônico simples"; Brasil Escola. Disponível em: https://brasilescola.uol.com.br/fisica/movimento-harmonico-simples.htm.<span style="font-size:0.7rem;color:rgb(98, 0, 255);">Acesso em 20 de setembro de 2024.</span></a>
+        <br>
+        <a target="_blank" href="https://www.sofisica.com.br/conteudos/FormulasEDicas/formulas12.php" style="font-size:0.7rem"> "Fórmulas MHS" em Só Física. Virtuous Tecnologia da Informação, 2008-2024. Disponível na Internet em http://www.sofisica.com.br/conteudos/FormulasEDicas/formulas12.php<span style="font-size:0.7rem;color:rgb(98, 0, 255);">Consultado em 20/09/2024 às 17:18.</span></a>
+        <br>
+        <h4>As imagens foram tiradas do site promilitares.com.br e app.planejativo.com, consulte nos links:</h4>
+        <br>
+        <a target="_blank" href="https://promilitares.com.br/concursos-militares/conteudo/movimento-harmonico-simples-mhs/"style="font-size:0.7rem">https://promilitares.com.br/concursos-militares/conteudo/movimento-harmonico-simples-mhs/<span style="font-size:0.7rem;color:rgb(98, 0, 255);"> Acesso em 20 de setembro de 2024.</span></a>
+        <br>
+        <a target="_blank" href="https://app.planejativo.com/estudar/272/resumo/fisica-movimento-harmonico-simples-mhs-sistema-massa-mola-e-pendulo-simples"style="font-size:0.7rem">https://app.planejativo.com/estudar/272/resumo/fisica-movimento-harmonico-simples-mhs-sistema-massa-mola-e-pendulo-simples<span style="font-size:0.7rem;color:rgb(98, 0, 255);"> Acesso em 20 de setembro de 2024.</span></a>
+        <br>
     </section>
     <article class="pop_up_pai">
             <div class="pop_up_simuladores">

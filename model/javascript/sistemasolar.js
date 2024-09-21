@@ -1,6 +1,21 @@
+let nuvem_simuladores = document.querySelector(".pop_up_simuladores")/*==*/
+let usuario_visitou_pela_primeira_vez_o_simulador =  localStorage.getItem("visitouSimuladorsolar") === null/*==*/
+//functions dos planetas click
 function sol(){
     alert("sol")
 }
+
+if (usuario_visitou_pela_primeira_vez_o_simulador) {/*==*/
+    //mostre a pop_up de acesso
+    nuvem_simuladores.style.display = 'flex'
+    localStorage.setItem("visitouSimuladorsolar", "true")
+}
+//pup_up simuladores
+function fechar_nuvem_simulador(){/*==*/
+    nuvem_simuladores.style.display = 'none'
+}
+
+
 /*button do paint do sistema solar*/
 function button(){
     let cor = "#c488ff"

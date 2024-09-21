@@ -11,19 +11,52 @@
 </head>
 <body>
     <section class="blocoDeInformacao">
-        <h2>Física</h2>
+        <!-- secao de informação -->
         <br>
-        <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div class="imagem_info">
-            
-        </div>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ."</p>
+        <h1 style="text-align:center;">Sistema Solar</h1>
+        <br>
+        <p>Finalmente o simulador do Sistema Solar!! Aqui, diferentemente dos outros simuladores, não temos que falar sobre MHS.<br><br>Sinta-se feliz, pois esse é o simulador mais recentemente lançado e com uma nova funcioanlidade: troca de cor defundo e visualização dos nomes e informações dos Planetas e Sol. <br><br>Fique a vontade para explorar.</p>
+    
+        <br>
+        <h3>Sistema Solar</h3>
 
-        <h2>Matemática</h2>
         <br>
-        <code></code>
-        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <p>O Sistema Solar é um conjunto formado por oito planetas e outros corpos celestes, que orbitam o Sol, a sua principal estrela.
+        </p>
+        <br>
+        <img style="width:100%;"src="./img/solarpadrao.jpg">
+        <br>
+        <p>Veja essa incrivel animação do movimento helicoidal; tornou-se viral e teve muita atenção da mídia.</p>
+        <br>
+        <img style="width:100%;"src="./img/solar.gif">
+
+        <br>
+        <p>"O Sistema Solar está em movimento ao redor da Via Láctea, enquanto os planetas no Sistema Solar estão em movimento orbitando ao redor do Sol. Como resultado, de um observador fora do Sistema Solar, os planetas parecerão se mover em um movimento helicoidal." Isso é o que diz o artigo do site que visitei, o link esta mais embaixo, é o segundo das referências</p>
+
+        <br>
+
+        <p>
+            Bom, esse simulador foi criado mais para demonstração do tempo que demora para um planeta circular o sol com uma velocidade muito mais acelerada, mas mantendo a análise real, isso é tudo...
+        </p>
+        <br>
+        <h4>Você pode consultar tudo o que foi escrito aqui pelos seguintes links:</h4>
+        <br>
+        <a target="_blank" href="https://brasilescola.uol.com.br/geografia/sistema-solar.htm" style="font-size:0.7rem">SOUSA, Rafaela. "Sistema Solar"; Brasil Escola. Disponível em: https://brasilescola.uol.com.br/geografia/sistema-solar.htm. <span style="font-size:0.7rem;color:rgb(98, 0, 255);">Acesso em 20 de setembro de 2024.</span></a>
+        <br>
+        <a target="_blank" href="https://terraplana.ws/movimento-helicoidal"style="font-size:0.7rem">https://terraplana.ws/movimento-helicoidal<span style="font-size:0.7rem;color:rgb(98, 0, 255);"> Acesso em 18 de setembro de 2024.</span></a>
+        <br>
+        <a target="_blank" href="https://depositphotos.com/br/vectors/sistema-solar.html"style="font-size:0.7rem">https://depositphotos.com/br/vectors/sistema-solar.html<span style="font-size:0.7rem;color:rgb(98, 0, 255);"> Acesso em 18 de setembro de 2024.</span></a>
+        
+        <br>
     </section>
+     <!-- ============================== -->
+    <article class="pop_up_pai">
+        <div class="pop_up_simuladores">
+          <p>Olá, visitante! Seja bem vindo ao simulador do nosso sistema solar, aperte o botão "ok" e observe a simulação. Aproveite!!</p>
+            <button onclick="fechar_nuvem_simulador()" class="simuok">OK</button>
+        </div>
+    </article>
+    <!-- ============================== -->
     <header>
         <!-- Todo o código do header/nav aqui...por favor -->
         <div class="logo"><div></div></div>
@@ -55,7 +88,7 @@
              <!-- controle -->
 
         <!-- </div> -->
-        <div class="configuracao">
+        <div class="configuracao" id="config">
             <!-- Todo o código do main aqui...por favor -->
                     
                     <!-- <div class="t1">

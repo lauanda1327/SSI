@@ -1,18 +1,21 @@
-const telaCanva = document.querySelector("#canvas");
+//mudança drastica mais recente foi trocar o
+//valor de let xc = 300 para 100
+const telaCanva = document.querySelector("#canvas2");
 const elementoPaiDoCanva = document.querySelector(".container");
 let nuvem_simuladores = document.querySelector(".pop_up_simuladores")/*==*/
-usuario_visitou_pela_primeira_vez_o_simulador =  localStorage.getItem("visitouSimulador") === null/*==*/
+usuario_visitou_pela_primeira_vez_o_simulador =  localStorage.getItem("visitouSimuladorMola") === null/*==*/
 alturaPai = elementoPaiDoCanva.clientHeight
 larguraPai = elementoPaiDoCanva.clientWidth
+// alert(larguraPai)
+// alert(alturaPai)
 if(larguraPai < 600){
-    telaCanva.setAttribute("width",larguraPai);
-    telaCanva.setAttribute("height",alturaPai / 1.8);
+   
 }
 
 if (usuario_visitou_pela_primeira_vez_o_simulador) {/*==*/
     //mostre a pop_up de acesso
     nuvem_simuladores.style.display = 'flex'
-    localStorage.setItem("visitouSimulador", "true")
+    localStorage.setItem("visitouSimuladorMola", "true")
 }
 //pup_up simuladores
 function fechar_nuvem_simulador(){/*==*/
@@ -45,7 +48,7 @@ function informacoes(){/*==*/
   // ângulo inicial
   let ang03 = localStorage.getItem("ang03");
   // Ponto onde a corda3 está presa
-  let xc = 300;
+  let xc = 100;
   let yc = 10;
   // coordenadas do pêndulo
   let x; 
@@ -65,7 +68,7 @@ let bancoDeDadosNaoExiste = localStorage.getItem("corda3") == null || localStora
 
     if (bancoDeDadosNaoExiste) {
       //resete para os valores padrão
-      localStorage.setItem("corda3", "300");
+      localStorage.setItem("corda3", "100");
       localStorage.setItem("ang03", "40");
       localStorage.setItem("numpos3", "30");
       localStorage.setItem("corfixo3",corPadrao);
@@ -114,7 +117,7 @@ let bancoDeDadosNaoExiste = localStorage.getItem("corda3") == null || localStora
      // desenhar obj
       ctx.fillStyle = cor;
       ctx.strokeStyle = cor;
-      ctx.strokeRect(300 - 15, y, 35,35)
+      ctx.strokeRect(100 - 15, y, 35,35)
       //ctx.strokeRect(x-15,y,30,30)
       //ctx.fillRect(x-15,y,30,30)
       //ctx.drawImage(img, 10, 10, 150, 180);
@@ -162,7 +165,7 @@ let bancoDeDadosNaoExiste = localStorage.getItem("corda3") == null || localStora
     }
     }
     function resetar() {
-      localStorage.setItem("corda3", "300");
+      localStorage.setItem("corda3", "100");
       localStorage.setItem("ang03", "40");
       localStorage.setItem("numpos3", "30");
       localStorage.setItem("corfixo3", corPadrao);

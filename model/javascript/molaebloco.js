@@ -1,18 +1,20 @@
 const telaCanva = document.querySelector("#canvas");
 const elementoPaiDoCanva = document.querySelector(".container");
 let nuvem_simuladores = document.querySelector(".pop_up_simuladores")/*==*/
-usuario_visitou_pela_primeira_vez_o_simulador =  localStorage.getItem("visitouSimulador") === null/*==*/
+usuario_visitou_pela_primeira_vez_o_simulador =  localStorage.getItem("visitouSimuladorBloco") === null/*==*/
 alturaPai = elementoPaiDoCanva.clientHeight
 larguraPai = elementoPaiDoCanva.clientWidth
 if(larguraPai < 600){
-    telaCanva.setAttribute("width",larguraPai);
-    telaCanva.setAttribute("height",alturaPai / 1.8);
+    telaCanva.setAttribute("width",larguraPai - 150);
+    telaCanva.setAttribute("height",alturaPai );
+}else{
+  larguraPai = elementoPaiDoCanva.clientWidth - 500 //mudança drastica
 }
 
 if (usuario_visitou_pela_primeira_vez_o_simulador) {/*==*/
     //mostre a pop_up de acesso
     nuvem_simuladores.style.display = 'flex'
-    localStorage.setItem("visitouSimulador", "true")
+    localStorage.setItem("visitouSimuladorBloco", "true")
 }
 //pup_up simuladores
 function fechar_nuvem_simulador(){/*==*/

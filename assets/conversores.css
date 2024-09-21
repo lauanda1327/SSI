@@ -296,6 +296,36 @@
   }
   /*media queries for mobile*/
  @media only screen and (max-width:600px) {
+    .resposta{
+        font-size: 1.5rem;
+        bottom: 0%;
+        position: static;
+        width: 50vw;
+        margin: 30px;
+        border-radius: 12px;
+        height: 20vh;
+        
+    }
+    .container4 #inputpi,.divisao,#inputpi2{
+       position: inherit;
+       display: inline;
+    }
+    label{
+        position: static;
+        font-size: 1.5rem;
+    } 
+    #inputGraus{
+       position: static;
+       border-radius: 12px;
+       width: 18vw;
+       font-size: 1.2rem;
+       height: 18vw;
+    }
+    h1{
+        position:static;
+        font-size: 1.15rem;
+        margin: 12px 20px;
+    }
     #s123 {
         width: 160%;
         height:22vh;
