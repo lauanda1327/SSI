@@ -17,9 +17,9 @@ O objetivo do sistema é permitir que o usuário visualize e manipule parâmetro
 
 Este projeto foi reconhecido em eventos acadêmicos e científicos:
 
-- **XIV CONNEPI (2024)** — Congresso Norte Nordeste de Pesquisa e Inovação  
-- **SECITEC (2023)** — Semana de Ciência e Tecnologia do IFBA  
-- **Artigo científico** desenvolvido como trabalho final de conclusão de curso  
+- 🏆 **XIV CONNEPI (2024)** — Congresso Norte Nordeste de Pesquisa e Inovação  
+- 🔬 **SECITEC (2023)** — Semana de Ciência e Tecnologia do IFBA  
+- 📄 **Artigo científico** desenvolvido como trabalho final de conclusão de curso  
 
 ---
 
