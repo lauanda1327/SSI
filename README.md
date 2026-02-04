@@ -15,7 +15,7 @@ O objetivo do sistema é permitir que o usuário visualize e manipule parâmetro
 
 ## Destaques acadêmicos
 
-Este projeto foi apresentado e reconhecido em eventos acadêmicos e científicos:
+Este projeto foi reconhecido em eventos acadêmicos e científicos:
 
 - **XIV CONNEPI (2024)** — Congresso Norte Nordeste de Pesquisa e Inovação  
 - **SECITEC (2023)** — Semana de Ciência e Tecnologia do IFBA  
