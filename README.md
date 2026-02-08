@@ -54,7 +54,6 @@ A simulação do pêndulo simples permite a análise do movimento oscilatório p
 É possível observar o período, a frequência e o comportamento do sistema ao longo do tempo.
 
 ### Sistema massa–mola
-
 O sistema massa–mola simula a oscilação de um bloco acoplado a uma mola ideal, permitindo ao usuário:
 
 - Alterar o comprimento da mola 
