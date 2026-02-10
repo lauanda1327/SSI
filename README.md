@@ -1,5 +1,5 @@
 # SSI (Software Simulador Informacional)
-> Simulador educacional desenvolvido para auxiliar o aprendizado de conceitos de Física por meio de simulações visuais e interativas.
+> Simulador educacional desenvolvido para auxiliar estudantes do 2.º ano do ensino médio no aprendizado de conceitos de Física por meio de simulações visuais e interativas.
 
 ![](./readme/image.png)
 
