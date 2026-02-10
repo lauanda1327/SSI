@@ -9,7 +9,7 @@
 
 O **SSI — Software Simulador Informacional** é um software educacional que contempla um conjunto de simulações interativas voltadas ao ensino de fenômenos físicos clássicos.
 
-O objetivo do software é permitir que o usuário visualize e manipule parâmetros físicos, observando o comportamento dinâmico dos sistemas estudados, servindo como ferramenta de apoio ao ensino tradicional de Física.
+O objetivo do software é permitir que o usuário visualize e manipule parâmetros físicos, e em seguida observe o comportamento dinâmico dos sistemas estudados, servindo como ferramenta de apoio ao ensino tradicional de Física.
 
 ---
 
