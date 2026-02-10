@@ -25,9 +25,9 @@ Este projeto foi reconhecido em eventos acadêmicos e científicos:
 
 ## Objetivos
 
-- Facilitar a compreensão de conceitos físicos abstratos  
+- Facilitar a compreensão de conceitos físicos abstratos
 - Promover o aprendizado ativo por meio de simulações  
-- Integrar tecnologia e educação de forma prática  
+- Integrar tecnologia e educação de forma prática e simples
 - Apoiar estudantes e professores em ambientes educacionais  
 
 ---
@@ -79,7 +79,7 @@ Essa simulação possibilita a observação das interações gravitacionais, tra
 O SSI pode ser utilizado como ferramenta de apoio em:
 
 - Aulas de Física  
-- Ambientes acadêmicos e laboratoriais  
+- Ambientes acadêmicos e laboratoriais
 - Demonstrações educacionais  
 - Estudos autônomos  
 
