@@ -78,10 +78,10 @@ Essa simulação possibilita a observação das interações gravitacionais, tra
 
 O SSI pode ser utilizado como ferramenta de apoio em:
 
-- Aulas de Física  
+- Aulas de Física do ensino médio  
 - Ambientes acadêmicos e laboratoriais
 - Demonstrações educacionais  
-- Estudos autônomos  
+- Estudos autônomos
 
 Isso é tudo. (:
 
