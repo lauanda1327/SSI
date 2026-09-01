@@ -88,9 +88,14 @@
 		</div>
 		<div>
 			<hr>
-			<h5>Projetado 🎨 e desenvolvido por <a href="https://github.com/lauanda1327">@LauandaNobre</a></h5>
+			<h5>Projetado 🎨 e desenvolvido por <a href="https://github.com/lauandanobre">@LauandaNobre</a></h5>
 			<h5>Esse site nãa utiliza de cookies 🍪. Apenas Simuladores Interativos...</h5>
-			<h6>Copyright © 2023-2024. All Rights Reserved. Lauanda Nobre</h6>
+			<h6>Copyright © 2023-<span id="year"></span>. All Rights Reserved. Lauanda Nobre</h6>
+
+			<script>
+  				document.getElementById("year").textContent = new Date().getFullYear();
+			</script>
+
 		</div>
 	</article>
 </main>

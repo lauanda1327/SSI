@@ -69,7 +69,7 @@
             <a href="#" class="info"><img src="../../model/icons/d.png" alt="link 4" class="d"></a>
         </div>
     </header>
-    <main>
+    <main class="sistemasolar-main">
         <div class="container_do_sistema_solar">
             <div class="sol"><button onclick="sol()"><mark class="solInfo"><p>Sol</p></mark></button></div>
             <div class="mercurio"><mark class="mercurioInfo"><p>Mercurio</p></mark></div>
@@ -83,6 +83,7 @@
             <div class="urano"><mark class="uranoInfo"><p>Urano</p></mark></div>
             <div class="netuno"><mark class="netunoInfo"><p>Netuno</p></mark></div>
         </div>
+        <div class="stars" id="stars"></div>
         <!-- Todo o código do main aqui...por favor -->
         <!-- <div class="configuracao"> -->
              <!-- controle -->
@@ -133,6 +134,28 @@
                     <div class="t7">
                         <h6 class="np">Sistema Solar<br>V 2.6</h6>
                     </div>
+                    <div class="t8">
+                        <div style="display:flex;flex-direction:column;gap:6px;padding:6px;">
+                            <div style="display:flex;align-items:center;justify-content:center;gap:8px;">
+                                <button id="speedDown">-</button>
+                                <span id="speedDisplay">1x</span>
+                                <button id="speedUp">+</button>
+                            </div>
+                            <div style="display:flex;flex-direction:column;gap:4px;">
+                                <label style="font-size:0.8rem;display:flex;justify-content:space-between;align-items:center;gap:8px;">
+                                    <span>Unidade:</span>
+                                    <select id="timeUnit">
+                                        <option value="1">1 dia / s</option>
+                                        <option value="7">1 semana / s</option>
+                                        <option value="30">1 mês (30d) / s</option>
+                                        <option value="365">1 ano (365d) / s</option>
+                                    </select>
+                                </label>
+                                <input id="timeSlider" type="range" min="0" max="100" value="0" />
+                                <div style="display:flex;justify-content:space-between;font-size:0.8rem;"><span>Tempo:</span><span id="timeDisplay">0%</span></div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- <div class="t8">
                         
                     </div> -->
@@ -153,4 +176,13 @@
     </main>
 </body>
 <script src="../../model/javascript/sistemasolar.js"></script>
+
+    <!-- modal de informações dos planetas -->
+    <div id="planetModal" class="planet-modal" style="display:none;position:fixed;inset:0;align-items:center;justify-content:center;z-index:99999;">
+        <div style="background:var(--blc);padding:16px;border-radius:12px;min-width:260px;max-width:80vw;">
+            <button id="closePlanetModal" style="float:right;background:transparent;border:none;font-size:1.2rem;">✕</button>
+            <h3 id="planetModalTitle">Planeta</h3>
+            <div id="planetModalBody" style="font-size:0.95rem;line-height:1.4rem;"></div>
+        </div>
+    </div>
 </html>

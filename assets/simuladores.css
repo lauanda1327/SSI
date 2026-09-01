@@ -6,6 +6,49 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+/* Override: usar variáveis para raio/período, adicionar estrelas e z-index */
+.container_do_sistema_solar{ position:relative; }
+.stars{ position:absolute; inset:0; z-index:0; pointer-events:none; }
+.container_do_sistema_solar > div{ z-index:3; }
+
+.mercurio{ --r:31.2px; --t:6.3s; animation: translacaom var(--t) linear infinite; }
+.venus{ --r:42.4px; --t:18.26s; animation: translacaov var(--t) linear infinite; }
+.terra{ --r:50px; --t:26.13s; animation: translacaot var(--t) linear infinite; }
+.marte{ --r:61.8px; --t:49.1s; animation: translacaomar var(--t) linear infinite; }
+.jupiter{ --r:114px; --t:310.1s; animation: translacaoj var(--t) linear infinite; }
+.anel_de_saturno{ --r:155px; --t:712.6s; animation: translacaos var(--t) linear infinite; }
+.urano{ --r:219px; --t:2136.8s; animation: translacaou var(--t) linear infinite; }
+.netuno{ --r:274px; --t:4273.9s; animation: translacaon var(--t) linear infinite; }
+
+@keyframes translacaom{ 0%{ transform: rotate(0deg) translate(var(--r,31.2px)) rotate(0deg);} 100%{ transform: rotate(360deg) translate(var(--r,31.2px)) rotate(360deg);} }
+@keyframes translacaov{ 0%{ transform: rotate(0deg) translate(var(--r,42.4px)) rotate(0deg);} 100%{ transform: rotate(360deg) translate(var(--r,42.4px)) rotate(360deg);} }
+@keyframes translacaot{ 0%{ transform: rotate(0deg) translate(var(--r,50px)) rotate(0deg);} 100%{ transform: rotate(360deg) translate(var(--r,50px)) rotate(360deg);} }
+@keyframes translacaomar{ 0%{ transform: rotate(0deg) translate(var(--r,61.8px)) rotate(0deg);} 100%{ transform: rotate(360deg) translate(var(--r,61.8px)) rotate(360deg);} }
+@keyframes translacaoj{ 0%{ transform: rotate(0deg) translate(var(--r,114px)) rotate(0deg);} 100%{ transform: rotate(360deg) translate(var(--r,114px)) rotate(360deg);} }
+@keyframes translacaos{ 0%{ transform: rotate(0deg) translate(var(--r,155px)) rotate(0deg);} 100%{ transform: rotate(360deg) translate(var(--r,155px)) rotate(360deg);} }
+@keyframes translacaou{ 0%{ transform: rotate(0deg) translate(var(--r,219px)) rotate(0deg);} 100%{ transform: rotate(360deg) translate(var(--r,219px)) rotate(360deg);} }
+@keyframes translacaon{ 0%{ transform: rotate(0deg) translate(var(--r,274px)) rotate(0deg);} 100%{ transform: rotate(360deg) translate(var(--r,274px)) rotate(360deg);} }
+
+/* estilo das estrelas */
+.stars span{ position:absolute; width:2px; height:2px; background:#fff; border-radius:50%; box-shadow:0 0 6px rgba(255,255,255,0.8); }
+
+/* modal */
+.planet-modal{ display:flex; align-items:center; justify-content:center; }
+.planet-modal{ display:flex; align-items:center; justify-content:center; }
+.planet-modal div{ box-shadow:0 8px 24px rgb(74, 47, 47); background:var(--blc); }
+.planet-card{
+    display:flex;gap:12px;align-items:flex-start;
+}
+.planet-avatar{ width:72px;height:72px;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,0.15);flex-shrink:0 }
+.planet-info h4{ margin:0 0 6px 0 }
+.planet-info p{ margin:0 0 6px 0;font-size:0.95rem }
+
+
+.sistemasolar-main{ background: #251133; }
+
+.controls button{ padding:6px 10px;border-radius:6px;border:none;background:#fff;cursor:pointer }
+.controls select, .controls input[type=range]{ border-radius:6px }
 .caixa2{
     display:flex;
     flex-direction: column;
@@ -35,7 +78,7 @@ code {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: blue orange;
+  scrollbar-color: rgb(140, 140, 144) rgb(12, 1, 30);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -64,7 +107,7 @@ code {
     align-items: flex-start;
     position: absolute;
     transform: translate(-50%, -50%);
-    z-index: 3;
+    z-index: 4;
     top: 44%;
     left: 50%;
     background-color: var(--blc);
